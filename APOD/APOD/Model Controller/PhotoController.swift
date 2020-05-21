@@ -12,7 +12,10 @@ class PhotoController {
     // MARK: - Properties
     private let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
     private let apiKey = "3MYY5NPWds1kZu7B3B7In88FKEHYXncJQkgBFNr6"
-    private(set) var photos:[WHLPhoto] = []
+    private var photos:[WHLPhoto] = []
+    var sortedPhotos:[WHLPhoto] {
+        return photos.sorted(by: { $0.date < $1.date })
+    }
 
     /// Date Formatter that will be used to both decode and encode Date objects. "yyy-MM-dd" -> "2020-05-21"
     let dateFormatter: DateFormatter = {
