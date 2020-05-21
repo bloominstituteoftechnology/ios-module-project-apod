@@ -61,19 +61,35 @@
 		92B88CC8247719B6007FAD44 /* Astronomy Picture of the Day */ = {
 			isa = PBXGroup;
 			children = (
-				92B88CC9247719B6007FAD44 /* AppDelegate.h */,
-				92B88CCA247719B6007FAD44 /* AppDelegate.m */,
-				92B88CCC247719B6007FAD44 /* SceneDelegate.h */,
-				92B88CCD247719B6007FAD44 /* SceneDelegate.m */,
+				92B88CE324771A50007FAD44 /* Resources */,
+				92B88CE424771AB0007FAD44 /* Storyboards */,
 				92B88CCF247719B6007FAD44 /* ViewController.h */,
 				92B88CD0247719B6007FAD44 /* ViewController.m */,
-				92B88CD2247719B6007FAD44 /* Main.storyboard */,
-				92B88CD5247719B9007FAD44 /* Assets.xcassets */,
-				92B88CD7247719B9007FAD44 /* LaunchScreen.storyboard */,
-				92B88CDA247719B9007FAD44 /* Info.plist */,
-				92B88CDB247719B9007FAD44 /* main.m */,
 			);
 			path = "Astronomy Picture of the Day";
+			sourceTree = "<group>";
+		};
+		92B88CE324771A50007FAD44 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92B88CC9247719B6007FAD44 /* AppDelegate.h */,
+				92B88CCA247719B6007FAD44 /* AppDelegate.m */,
+				92B88CD5247719B9007FAD44 /* Assets.xcassets */,
+				92B88CDA247719B9007FAD44 /* Info.plist */,
+				92B88CDB247719B9007FAD44 /* main.m */,
+				92B88CCC247719B6007FAD44 /* SceneDelegate.h */,
+				92B88CCD247719B6007FAD44 /* SceneDelegate.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92B88CE424771AB0007FAD44 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				92B88CD7247719B9007FAD44 /* LaunchScreen.storyboard */,
+				92B88CD2247719B6007FAD44 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +118,7 @@
 		92B88CBE247719B6007FAD44 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MTG;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Mark Gerrior";
 				TargetAttributes = {
@@ -291,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZDYKHFRDV;
-				INFOPLIST_FILE = "Astronomy Picture of the Day/Info.plist";
+				INFOPLIST_FILE = "Astronomy Picture of the Day/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +325,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZDYKHFRDV;
-				INFOPLIST_FILE = "Astronomy Picture of the Day/Info.plist";
+				INFOPLIST_FILE = "Astronomy Picture of the Day/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
