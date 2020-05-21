@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		13AA52FD24771B2B0021CDD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA52FC24771B2B0021CDD8 /* AppDelegate.swift */; };
 		13AA52FF24771B2B0021CDD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA52FE24771B2B0021CDD8 /* SceneDelegate.swift */; };
-		13AA530124771B2B0021CDD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA530024771B2B0021CDD8 /* ViewController.swift */; };
 		13AA530424771B2B0021CDD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13AA530224771B2B0021CDD8 /* Main.storyboard */; };
 		13AA530624771B2C0021CDD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13AA530524771B2C0021CDD8 /* Assets.xcassets */; };
 		13AA530924771B2C0021CDD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13AA530724771B2C0021CDD8 /* LaunchScreen.storyboard */; };
+		13AA531424771B9F0021CDD8 /* WHLPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AA531324771B9F0021CDD8 /* WHLPhoto.m */; };
+		13AA531624771BAC0021CDD8 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA531524771BAB0021CDD8 /* PhotoController.swift */; };
+		13AA532124771C330021CDD8 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA532024771C330021CDD8 /* PhotoCollectionViewCell.swift */; };
+		13AA532324771C570021CDD8 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA532224771C570021CDD8 /* PhotosViewController.swift */; };
+		13AA532524771C6E0021CDD8 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA532424771C6E0021CDD8 /* PhotoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13AA52F924771B2A0021CDD8 /* APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13AA52FC24771B2B0021CDD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13AA52FE24771B2B0021CDD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13AA530024771B2B0021CDD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		13AA530324771B2B0021CDD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13AA530524771B2C0021CDD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13AA530824771B2C0021CDD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13AA530A24771B2C0021CDD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13AA531124771B9F0021CDD8 /* APOD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APOD-Bridging-Header.h"; sourceTree = "<group>"; };
+		13AA531224771B9F0021CDD8 /* WHLPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHLPhoto.h; sourceTree = "<group>"; };
+		13AA531324771B9F0021CDD8 /* WHLPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHLPhoto.m; sourceTree = "<group>"; };
+		13AA531524771BAB0021CDD8 /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
+		13AA532024771C330021CDD8 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		13AA532224771C570021CDD8 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		13AA532424771C6E0021CDD8 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,61 @@
 		13AA52FB24771B2B0021CDD8 /* APOD */ = {
 			isa = PBXGroup;
 			children = (
-				13AA52FC24771B2B0021CDD8 /* AppDelegate.swift */,
-				13AA52FE24771B2B0021CDD8 /* SceneDelegate.swift */,
-				13AA530024771B2B0021CDD8 /* ViewController.swift */,
+				13AA532624771C710021CDD8 /* Views */,
+				13AA531C24771C010021CDD8 /* View Controllers */,
+				13AA531024771B6E0021CDD8 /* Application */,
 				13AA530224771B2B0021CDD8 /* Main.storyboard */,
-				13AA530524771B2C0021CDD8 /* Assets.xcassets */,
 				13AA530724771B2C0021CDD8 /* LaunchScreen.storyboard */,
-				13AA530A24771B2C0021CDD8 /* Info.plist */,
+				13AA531724771BB00021CDD8 /* Model */,
+				13AA531824771BB60021CDD8 /* Model Controller */,
+				13AA531124771B9F0021CDD8 /* APOD-Bridging-Header.h */,
 			);
 			path = APOD;
+			sourceTree = "<group>";
+		};
+		13AA531024771B6E0021CDD8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				13AA52FC24771B2B0021CDD8 /* AppDelegate.swift */,
+				13AA52FE24771B2B0021CDD8 /* SceneDelegate.swift */,
+				13AA530524771B2C0021CDD8 /* Assets.xcassets */,
+				13AA530A24771B2C0021CDD8 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		13AA531724771BB00021CDD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13AA531224771B9F0021CDD8 /* WHLPhoto.h */,
+				13AA531324771B9F0021CDD8 /* WHLPhoto.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13AA531824771BB60021CDD8 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13AA531524771BAB0021CDD8 /* PhotoController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		13AA531C24771C010021CDD8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				13AA532224771C570021CDD8 /* PhotosViewController.swift */,
+				13AA532424771C6E0021CDD8 /* PhotoDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		13AA532624771C710021CDD8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13AA532024771C330021CDD8 /* PhotoCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +155,7 @@
 				TargetAttributes = {
 					13AA52F824771B2A0021CDD8 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -138,9 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13AA530124771B2B0021CDD8 /* ViewController.swift in Sources */,
 				13AA52FD24771B2B0021CDD8 /* AppDelegate.swift in Sources */,
 				13AA52FF24771B2B0021CDD8 /* SceneDelegate.swift in Sources */,
+				13AA531624771BAC0021CDD8 /* PhotoController.swift in Sources */,
+				13AA532524771C6E0021CDD8 /* PhotoDetailViewController.swift in Sources */,
+				13AA532324771C570021CDD8 /* PhotosViewController.swift in Sources */,
+				13AA532124771C330021CDD8 /* PhotoCollectionViewCell.swift in Sources */,
+				13AA531424771B9F0021CDD8 /* WHLPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,14 +345,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = APOD/Info.plist;
+				INFOPLIST_FILE = APOD/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyattharrell.APOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "APOD/APOD-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,14 +365,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = APOD/Info.plist;
+				INFOPLIST_FILE = APOD/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyattharrell.APOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "APOD/APOD-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
