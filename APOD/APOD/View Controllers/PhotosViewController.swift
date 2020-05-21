@@ -19,6 +19,12 @@ class PhotosViewController: UIViewController {
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let firstLaunch = UserDefaults.standard.bool(forKey: "firstLaunch")
+        if !firstLaunch {
+            performSegue(withIdentifier: "PresentOnboardingModalSeuge", sender: self)
+            UserDefaults.standard.set(true, forKey: "firstLaunch")
+        }
     }
     
     // MARK: - Navigation

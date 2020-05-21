@@ -33,7 +33,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MtV-cV-afh">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="MtV-cV-afh">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -87,11 +87,89 @@
                     <navigationItem key="navigationItem" id="5cB-YW-32v"/>
                     <connections>
                         <outlet property="collectionView" destination="hjG-aD-IFY" id="LoA-bS-mOy"/>
+                        <segue destination="3sP-Pg-irp" kind="presentation" identifier="PresentOnboardingModalSeuge" id="uZN-Bh-lP2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e59-hL-lvN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000.0000000000001" y="57.589285714285708"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="Mrr-Bn-UBM">
+            <objects>
+                <viewController id="3sP-Pg-irp" customClass="OnboardingViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3DC-TM-tBq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-screen" translatesAutoresizingMaskIntoConstraints="NO" id="lpx-TU-bTe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="589.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Astronomy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhz-tY-fIt">
+                                <rect key="frame" x="20" y="20" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRA-er-aSN">
+                                <rect key="frame" x="40" y="738" width="334" height="50"/>
+                                <color key="backgroundColor" red="0.51087427139999997" green="0.70252388720000003" blue="0.83460807800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fRU-Fq-cqF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Check it out!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="3sP-Pg-irp" eventType="touchUpInside" id="LfR-Oc-OB4"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W69-Wy-y1N">
+                                <rect key="frame" x="40" y="573.5" width="334" height="97"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ups-8F-ahe">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="48"/>
+                                        <string key="text">Welcome to Astronomy
+Picture of the Day</string>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where you can browse stellar photos posted every day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luo-Ce-tvd">
+                                        <rect key="frame" x="0.0" y="56" width="334" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lpx-TU-bTe" firstAttribute="height" secondItem="3DC-TM-tBq" secondAttribute="height" multiplier="0.7" id="8Qz-V3-r47"/>
+                            <constraint firstItem="lpx-TU-bTe" firstAttribute="top" secondItem="47d-Uu-lS5" secondAttribute="top" id="C8u-32-ViO"/>
+                            <constraint firstItem="47d-Uu-lS5" firstAttribute="trailing" secondItem="mRA-er-aSN" secondAttribute="trailing" constant="40" id="DUV-dZ-n0J"/>
+                            <constraint firstItem="47d-Uu-lS5" firstAttribute="trailing" secondItem="Uhz-tY-fIt" secondAttribute="trailing" constant="20" id="O68-oU-XRY"/>
+                            <constraint firstItem="47d-Uu-lS5" firstAttribute="bottom" secondItem="mRA-er-aSN" secondAttribute="bottom" constant="20" id="WfI-Iy-sYu"/>
+                            <constraint firstItem="lpx-TU-bTe" firstAttribute="leading" secondItem="47d-Uu-lS5" secondAttribute="leading" id="Wqh-IP-4su"/>
+                            <constraint firstItem="W69-Wy-y1N" firstAttribute="top" secondItem="lpx-TU-bTe" secondAttribute="bottom" constant="-16" id="ZTG-5W-duE"/>
+                            <constraint firstItem="W69-Wy-y1N" firstAttribute="leading" secondItem="47d-Uu-lS5" secondAttribute="leading" constant="40" id="iSO-y9-HOh"/>
+                            <constraint firstItem="Uhz-tY-fIt" firstAttribute="leading" secondItem="47d-Uu-lS5" secondAttribute="leading" constant="20" id="ia9-j4-KKN"/>
+                            <constraint firstItem="lpx-TU-bTe" firstAttribute="trailing" secondItem="47d-Uu-lS5" secondAttribute="trailing" id="lkB-th-nbo"/>
+                            <constraint firstItem="mRA-er-aSN" firstAttribute="leading" secondItem="47d-Uu-lS5" secondAttribute="leading" constant="40" id="sYa-mx-bAo"/>
+                            <constraint firstItem="Uhz-tY-fIt" firstAttribute="top" secondItem="47d-Uu-lS5" secondAttribute="top" constant="20" id="tX5-4p-59T"/>
+                            <constraint firstAttribute="trailing" secondItem="W69-Wy-y1N" secondAttribute="trailing" constant="40" id="xTk-1x-0Ac"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="47d-Uu-lS5"/>
+                    </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="mRA-er-aSN" id="1yJ-5f-jbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cka-4p-g3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="806"/>
         </scene>
         <!--Photo Detail View Controller-->
         <scene sceneID="WZ1-AQ-5hB">
@@ -101,7 +179,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-52-gid">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-52-gid">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtZ-4l-JdF">
@@ -204,5 +282,7 @@
     </scenes>
     <resources>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="planet" width="188" height="173"/>
+        <image name="splash-screen" width="375" height="508"/>
     </resources>
 </document>
