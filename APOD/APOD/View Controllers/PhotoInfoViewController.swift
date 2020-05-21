@@ -34,6 +34,10 @@ class PhotoInfoViewController: UIViewController {
             titleLabel.text = photo.title
             infoTextView.text = photo.explanation
         }
+        
+        
+        
+        
     }
 
 }
