@@ -9,10 +9,14 @@
 import Foundation
 
 class PhotoController {
-    let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
-    var photos:[WHLPhoto] = []
-    let dateFormatter = DateFormatter {
+    private let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
+    private(set) var photos:[WHLPhoto] = []
 
+    /// Date Formatter that will be used to both decode and encode Date objects. "yyy-MM-dd" -> "2020-05-21"
+    let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter
     }()
 
     func fetchPhotoForDate(date: Date) {
