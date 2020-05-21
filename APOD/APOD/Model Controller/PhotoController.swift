@@ -98,4 +98,18 @@ class PhotoController {
         }.resume()
 
     }
+
+    /// Takes care of creating all Date objects to be used for a given month in any given year
+    /// - Parameters:
+    ///   - month: Month to be fetched
+    ///   - year: Year to be fetched
+    /// - Returns: an array of Date objects that can be used for fetching photos from Nasa API or for formatting the CollectionView
+    func getDays(for month: Int, in year: Int) -> [Date] {
+        let dateComponents = DateComponents(year: year, month: month)
+        let calendar = Calendar.current
+        let date = calendar.date(from: dateComponents)!
+        let range = calendar.range(of: .day, in: .month, for: date)!
+        let days = (range.lowerBound ..< range.upperBound).compactMap { calendar.date(byAdding: .day, value: $0, to: date) }
+        return days
+    }
 }
