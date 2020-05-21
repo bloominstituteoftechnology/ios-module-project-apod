@@ -80,4 +80,22 @@ class PhotoController {
 
         }.resume()
     }
+
+    ///  Method will send a get request to API with passed in URL
+    /// - Parameters:
+    ///   - url: WHLPhoto.hdurl is all that needs to be passed in
+    ///   - completion: Will return Data if successful, and Error if error communicating with server.
+    /// - Returns: Nil. Completion handler returns Data, so must Initialize a UIImage in completion handler.
+    func fetchPhotoData(url: URL, completion: @escaping (Data?, Error?)->()) {
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            if let error = error {
+                NSLog("Error fetching single photo(URL: \(url)) : \(error)")
+            }
+
+            guard let data = data else { fatalError() }
+
+            completion(data, nil)
+        }.resume()
+
+    }
 }
