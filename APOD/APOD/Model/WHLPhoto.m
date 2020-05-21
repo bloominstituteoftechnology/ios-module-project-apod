@@ -10,4 +10,27 @@
 
 @implementation WHLPhoto
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _title = @"Wrongfully inititalized photo object.";
+        _explanation = @"Wrongfully initialized photo object.";
+        _date = [[NSDate alloc] init];
+        _imgSrc = nil;
+    }
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title explanation:(NSString *)explanation date:(NSDate *)date imgSrc:(NSURL *)imgSrc {
+    self = [super init];
+    if (self) {
+        _title = title;
+        _explanation = explanation;
+        _date = date;
+        _imgSrc = imgSrc;
+    }
+    return self;
+}
+
 @end
