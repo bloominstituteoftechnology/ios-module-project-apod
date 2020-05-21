@@ -17,18 +17,18 @@
         _title = @"Wrongfully inititalized photo object.";
         _explanation = @"Wrongfully initialized photo object.";
         _date = [[NSDate alloc] init];
-        _imgSrc = nil;
+        _hdurl = nil;
     }
     return self;
 }
 
-- (instancetype)initWithTitle:(NSString *)title explanation:(NSString *)explanation date:(NSDate *)date imgSrc:(NSURL *)imgSrc {
+- (instancetype)initWithTitle:(NSString *)title explanation:(NSString *)explanation date:(NSDate *)date hdurl:(NSURL *)hdurl {
     self = [super init];
     if (self) {
         _title = title;
         _explanation = explanation;
         _date = date;
-        _imgSrc = imgSrc;
+        _hdurl = hdurl;
     }
     return self;
 }
