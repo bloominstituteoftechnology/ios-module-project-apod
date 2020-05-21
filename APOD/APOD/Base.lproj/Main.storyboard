@@ -65,7 +65,7 @@
                                         <connections>
                                             <outlet property="dateLabel" destination="9DU-Eo-vPZ" id="uAr-em-YHc"/>
                                             <outlet property="imageView" destination="MtV-cV-afh" id="NMV-XD-L22"/>
-                                            <segue destination="4JF-5R-p7c" kind="show" id="BAb-IE-vbE"/>
+                                            <segue destination="4JF-5R-p7c" kind="show" identifier="ShowImageDetailSegue" id="BAb-IE-vbE"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -85,6 +85,9 @@
                         <viewLayoutGuide key="safeArea" id="WtV-g4-had"/>
                     </view>
                     <navigationItem key="navigationItem" id="5cB-YW-32v"/>
+                    <connections>
+                        <outlet property="collectionView" destination="hjG-aD-IFY" id="LoA-bS-mOy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e59-hL-lvN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,7 +113,7 @@
                                 <state key="normal" image="info.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="infoButtonTapped:" destination="4JF-5R-p7c" eventType="touchUpInside" id="3by-bM-U4A"/>
-                                    <segue destination="uQo-wO-fq0" kind="presentation" id="h1f-CL-PNv"/>
+                                    <segue destination="uQo-wO-fq0" kind="presentation" identifier="ShowImageInfoSegue" id="h1f-CL-PNv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -171,6 +174,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Vg-RT-XIc"/>
                     </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="pqq-XY-euk" id="qhQ-Sh-fbE"/>
+                        <outlet property="titleLabel" destination="FsQ-Zg-HXo" id="zX5-fd-8ph"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxW-wH-5zT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
