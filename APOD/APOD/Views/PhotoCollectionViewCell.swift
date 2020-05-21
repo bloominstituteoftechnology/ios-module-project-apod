@@ -10,4 +10,17 @@ import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var dateLabel: UILabel!
+    
+    var photo: WHLPhoto? {
+        didSet {
+            setupViews()
+        }
+    }
+    
+    private func setupViews() {
+        
+    }
+    
 }

@@ -17,6 +17,7 @@
 		13AA532124771C330021CDD8 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA532024771C330021CDD8 /* PhotoCollectionViewCell.swift */; };
 		13AA532324771C570021CDD8 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA532224771C570021CDD8 /* PhotosViewController.swift */; };
 		13AA532524771C6E0021CDD8 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA532424771C6E0021CDD8 /* PhotoDetailViewController.swift */; };
+		13AA5328247726180021CDD8 /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA5327247726180021CDD8 /* PhotoInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		13AA532024771C330021CDD8 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		13AA532224771C570021CDD8 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		13AA532424771C6E0021CDD8 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		13AA5327247726180021CDD8 /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				13AA532224771C570021CDD8 /* PhotosViewController.swift */,
 				13AA532424771C6E0021CDD8 /* PhotoDetailViewController.swift */,
+				13AA5327247726180021CDD8 /* PhotoInfoViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				13AA531624771BAC0021CDD8 /* PhotoController.swift in Sources */,
 				13AA532524771C6E0021CDD8 /* PhotoDetailViewController.swift in Sources */,
 				13AA532324771C570021CDD8 /* PhotosViewController.swift in Sources */,
+				13AA5328247726180021CDD8 /* PhotoInfoViewController.swift in Sources */,
 				13AA532124771C330021CDD8 /* PhotoCollectionViewCell.swift in Sources */,
 				13AA531424771B9F0021CDD8 /* WHLPhoto.m in Sources */,
 			);
