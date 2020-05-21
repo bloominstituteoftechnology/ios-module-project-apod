@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		04E92FD1247717A30093A49A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FD0247717A30093A49A /* AppDelegate.swift */; };
 		04E92FD3247717A30093A49A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FD2247717A30093A49A /* SceneDelegate.swift */; };
-		04E92FD5247717A30093A49A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FD4247717A30093A49A /* ViewController.swift */; };
+		04E92FD5247717A30093A49A /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FD4247717A30093A49A /* PhotoDetailViewController.swift */; };
 		04E92FD8247717A30093A49A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E92FD6247717A30093A49A /* Main.storyboard */; };
 		04E92FDA247717A40093A49A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E92FD9247717A40093A49A /* Assets.xcassets */; };
 		04E92FDD247717A40093A49A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E92FDB247717A40093A49A /* LaunchScreen.storyboard */; };
+		04E92FE6247721260093A49A /* PhotoDescriptionTrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FE5247721260093A49A /* PhotoDescriptionTrayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04E92FCD247717A30093A49A /* APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E92FD0247717A30093A49A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E92FD2247717A30093A49A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04E92FD4247717A30093A49A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04E92FD4247717A30093A49A /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		04E92FD7247717A30093A49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04E92FD9247717A40093A49A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E92FDC247717A40093A49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E92FDE247717A40093A49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E92FE5247721260093A49A /* PhotoDescriptionTrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDescriptionTrayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				04E92FD6247717A30093A49A /* Main.storyboard */,
-				04E92FD4247717A30093A49A /* ViewController.swift */,
+				04E92FE5247721260093A49A /* PhotoDescriptionTrayViewController.swift */,
+				04E92FD4247717A30093A49A /* PhotoDetailViewController.swift */,
 				04E92FE42477183C0093A49A /* Resources */,
 			);
 			path = APOD;
@@ -146,7 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E92FD5247717A30093A49A /* ViewController.swift in Sources */,
+				04E92FE6247721260093A49A /* PhotoDescriptionTrayViewController.swift in Sources */,
+				04E92FD5247717A30093A49A /* PhotoDetailViewController.swift in Sources */,
 				04E92FD1247717A30093A49A /* AppDelegate.swift in Sources */,
 				04E92FD3247717A30093A49A /* SceneDelegate.swift in Sources */,
 			);
