@@ -56,15 +56,23 @@
 		04E92FCF247717A30093A49A /* APOD */ = {
 			isa = PBXGroup;
 			children = (
+				04E92FD6247717A30093A49A /* Main.storyboard */,
+				04E92FD4247717A30093A49A /* ViewController.swift */,
+				04E92FE42477183C0093A49A /* Resources */,
+			);
+			path = APOD;
+			sourceTree = "<group>";
+		};
+		04E92FE42477183C0093A49A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				04E92FD0247717A30093A49A /* AppDelegate.swift */,
 				04E92FD2247717A30093A49A /* SceneDelegate.swift */,
-				04E92FD4247717A30093A49A /* ViewController.swift */,
-				04E92FD6247717A30093A49A /* Main.storyboard */,
 				04E92FD9247717A40093A49A /* Assets.xcassets */,
 				04E92FDB247717A40093A49A /* LaunchScreen.storyboard */,
 				04E92FDE247717A40093A49A /* Info.plist */,
 			);
-			path = APOD;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +294,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94ZMA2MYR4;
-				INFOPLIST_FILE = APOD/Info.plist;
+				INFOPLIST_FILE = APOD/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94ZMA2MYR4;
-				INFOPLIST_FILE = APOD/Info.plist;
+				INFOPLIST_FILE = APOD/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
