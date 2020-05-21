@@ -26,12 +26,17 @@ class PhotosViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "firstLaunch")
         }
         
-        photoController.fetchToday { (error) in
+        photoController.fetchPhotoForDate(date: Date()) { (error) in
             if let error = error {
-                NSLog("error \(error)")
+                NSLog("Error fetching photos \(error)")
+                return
             }
-            print(self.photoController.photos.count)
-            self.collectionView.reloadData()
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                print(self.photoController.photos.count)
+            }
+            
         }
         
     }
@@ -42,6 +47,22 @@ class PhotosViewController: UIViewController {
             guard let photoDetailVC = segue.destination as? PhotoDetailViewController else { return }
             guard let selected = collectionView.indexPathsForSelectedItems else { return }
             photoDetailVC.photo = photoController.photos[selected[0].row]
+            photoDetailVC.photoController = photoController
+        }
+    }
+    
+    private func loadImage(for cell: PhotoCollectionViewCell, with photo: WHLPhoto) {
+        photoController.fetchPhotoData(url: photo.hdurl) { (data, error) in
+            if let error = error {
+                NSLog("Error fetching photos \(error)")
+                return
+            }
+            
+            if let data = data {
+                DispatchQueue.main.async {
+                    cell.imageView.image = UIImage(data: data)
+                }
+            }
         }
     }
     
@@ -55,7 +76,9 @@ extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCollectionViewCell else { return UICollectionViewCell() }
 
-        cell.photo = photoController.photos[indexPath.row]
+        let photo = photoController.photos[indexPath.row]
+        cell.photo = photo
+        loadImage(for: cell, with: photo)
         
         return cell
     }

@@ -33,9 +33,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="MtV-cV-afh">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="MtV-cV-afh">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqS-sT-EKR">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -58,7 +57,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="tqS-sT-EKR" firstAttribute="leading" secondItem="uBC-bR-9kc" secondAttribute="leading" id="I3A-gj-yhW"/>
+                                                <constraint firstItem="MtV-cV-afh" firstAttribute="top" secondItem="uBC-bR-9kc" secondAttribute="top" id="N66-3N-t5M"/>
+                                                <constraint firstAttribute="trailing" secondItem="MtV-cV-afh" secondAttribute="trailing" id="Nut-SY-dPY"/>
+                                                <constraint firstAttribute="bottom" secondItem="MtV-cV-afh" secondAttribute="bottom" id="PQR-8x-5vd"/>
                                                 <constraint firstItem="tqS-sT-EKR" firstAttribute="top" secondItem="uBC-bR-9kc" secondAttribute="top" id="uaG-9t-nWE"/>
+                                                <constraint firstItem="MtV-cV-afh" firstAttribute="leading" secondItem="uBC-bR-9kc" secondAttribute="leading" id="zKn-M6-7Zt"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="200" height="200"/>
@@ -179,7 +182,7 @@ Picture of the Day</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-52-gid">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-52-gid">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtZ-4l-JdF">
