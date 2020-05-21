@@ -10,5 +10,7 @@ import Foundation
 
 class PhotoController {
     let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
+    var photos:[WHLPhoto] = []
+
     
 }
