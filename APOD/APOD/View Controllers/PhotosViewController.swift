@@ -25,6 +25,15 @@ class PhotosViewController: UIViewController {
             performSegue(withIdentifier: "PresentOnboardingModalSeuge", sender: self)
             UserDefaults.standard.set(true, forKey: "firstLaunch")
         }
+        
+        photoController.fetchToday { (error) in
+            if let error = error {
+                NSLog("error \(error)")
+            }
+            print(self.photoController.photos.count)
+            self.collectionView.reloadData()
+        }
+        
     }
     
     // MARK: - Navigation
