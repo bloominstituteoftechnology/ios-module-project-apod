@@ -15,6 +15,9 @@
 		04E92FDD247717A40093A49A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E92FDB247717A40093A49A /* LaunchScreen.storyboard */; };
 		04E92FE6247721260093A49A /* PhotoDescriptionTrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FE5247721260093A49A /* PhotoDescriptionTrayViewController.swift */; };
 		04E92FEC24778BBB0093A49A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FEB24778BBB0093A49A /* Photo.m */; };
+		04E92FF0247792FC0093A49A /* NetworkingEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FED247792FC0093A49A /* NetworkingEnums.swift */; };
+		04E92FF1247792FC0093A49A /* NetworkingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FEE247792FC0093A49A /* NetworkingExtensions.swift */; };
+		04E92FF2247792FC0093A49A /* ResultDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FEF247792FC0093A49A /* ResultDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		04E92FE924778BBB0093A49A /* APOD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APOD-Bridging-Header.h"; sourceTree = "<group>"; };
 		04E92FEA24778BBB0093A49A /* Photo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		04E92FEB24778BBB0093A49A /* Photo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		04E92FED247792FC0093A49A /* NetworkingEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingEnums.swift; sourceTree = "<group>"; };
+		04E92FEE247792FC0093A49A /* NetworkingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingExtensions.swift; sourceTree = "<group>"; };
+		04E92FEF247792FC0093A49A /* ResultDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +52,6 @@
 		04E92FC4247717A30093A49A = {
 			isa = PBXGroup;
 			children = (
-				04E92FEA24778BBB0093A49A /* Photo.h */,
-				04E92FEB24778BBB0093A49A /* Photo.m */,
 				04E92FCF247717A30093A49A /* APOD */,
 				04E92FCE247717A30093A49A /* Products */,
 				04E92FE924778BBB0093A49A /* APOD-Bridging-Header.h */,
@@ -66,8 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				04E92FD6247717A30093A49A /* Main.storyboard */,
-				04E92FE5247721260093A49A /* PhotoDescriptionTrayViewController.swift */,
-				04E92FD4247717A30093A49A /* PhotoDetailViewController.swift */,
+				04E92FF42477933D0093A49A /* ViewControllers */,
+				04E92FF5247793460093A49A /* Models */,
+				04E92FF3247793120093A49A /* Networking */,
 				04E92FE42477183C0093A49A /* Resources */,
 			);
 			path = APOD;
@@ -83,6 +88,34 @@
 				04E92FDE247717A40093A49A /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		04E92FF3247793120093A49A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				04E92FED247792FC0093A49A /* NetworkingEnums.swift */,
+				04E92FEE247792FC0093A49A /* NetworkingExtensions.swift */,
+				04E92FEF247792FC0093A49A /* ResultDecoder.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		04E92FF42477933D0093A49A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04E92FE5247721260093A49A /* PhotoDescriptionTrayViewController.swift */,
+				04E92FD4247717A30093A49A /* PhotoDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04E92FF5247793460093A49A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04E92FEA24778BBB0093A49A /* Photo.h */,
+				04E92FEB24778BBB0093A49A /* Photo.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +192,11 @@
 			files = (
 				04E92FE6247721260093A49A /* PhotoDescriptionTrayViewController.swift in Sources */,
 				04E92FD5247717A30093A49A /* PhotoDetailViewController.swift in Sources */,
+				04E92FF1247792FC0093A49A /* NetworkingExtensions.swift in Sources */,
+				04E92FF2247792FC0093A49A /* ResultDecoder.swift in Sources */,
 				04E92FD1247717A30093A49A /* AppDelegate.swift in Sources */,
 				04E92FEC24778BBB0093A49A /* Photo.m in Sources */,
+				04E92FF0247792FC0093A49A /* NetworkingEnums.swift in Sources */,
 				04E92FD3247717A30093A49A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
