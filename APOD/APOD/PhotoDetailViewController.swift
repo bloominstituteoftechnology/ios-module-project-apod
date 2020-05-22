@@ -55,9 +55,8 @@ class PhotoDetailViewController: UIViewController {
             
             if shouldMoveTray {
                 let translation = pan.translation(in: view)
-                var newTrayConstant = trayConstraint.constant - translation.y
-                newTrayConstant = min(max(newTrayConstant, trayClosedOffset), trayOpenOffset)
-                trayConstraint.constant = newTrayConstant
+                trayConstraint.constant = (trayConstraint.constant - translation.y)
+                    .clamped(trayClosedOffset, trayOpenOffset)
             }
         case .ended:
             shouldMoveTray = false
@@ -87,3 +86,8 @@ class PhotoDetailViewController: UIViewController {
     }
 }
 
+extension Comparable {
+    func clamped(_ minimum: Self, _ maximum: Self) -> Self {
+        min(max(self, minimum), maximum)
+    }
+}
