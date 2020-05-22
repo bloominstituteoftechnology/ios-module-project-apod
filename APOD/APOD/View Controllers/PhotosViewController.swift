@@ -26,17 +26,24 @@ class PhotosViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "firstLaunch")
         }
         
-        photoController.fetchPhotoForDate(date: Date()) { (error) in
-            if let error = error {
-                NSLog("Error fetching photos \(error)")
-                return
-            }
+        
+        let days = photoController.getDays(for: 1, in: 2020)
+        
+        
+        for item in days {
             
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-                print(self.photoController.photos.count)
+            photoController.fetchPhotoForDate(date: item) { (error) in
+                if let error = error {
+                    NSLog("Error fetching photos \(error)")
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                    print(self.photoController.sortedPhotos.count)
+                }
+                
             }
-            
         }
         
     }
@@ -46,7 +53,7 @@ class PhotosViewController: UIViewController {
         if segue.identifier == "ShowImageDetailSegue" {
             guard let photoDetailVC = segue.destination as? PhotoDetailViewController else { return }
             guard let selected = collectionView.indexPathsForSelectedItems else { return }
-            photoDetailVC.photo = photoController.photos[selected[0].row]
+            photoDetailVC.photo = photoController.sortedPhotos[selected[0].row]
             photoDetailVC.photoController = photoController
         }
     }
@@ -70,15 +77,16 @@ class PhotosViewController: UIViewController {
 
 extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photoController.photos.count
+        return photoController.sortedPhotos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCollectionViewCell else { return UICollectionViewCell() }
 
-        let photo = photoController.photos[indexPath.row]
+        let photo = photoController.sortedPhotos[indexPath.row]
         cell.photo = photo
         loadImage(for: cell, with: photo)
+        cell.layer.cornerRadius = 8
         
         return cell
     }

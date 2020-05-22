@@ -20,7 +20,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupViews() {
-        
     }
     
 }

@@ -183,7 +183,7 @@ Picture of the Day</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-52-gid">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtZ-4l-JdF">
                                 <rect key="frame" x="350" y="798" width="44" height="44"/>
@@ -191,6 +191,7 @@ Picture of the Day</string>
                                     <constraint firstAttribute="height" constant="44" id="CH2-CR-5pm"/>
                                     <constraint firstAttribute="width" constant="44" id="wvu-Hi-HU7"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="info.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="infoButtonTapped:" destination="4JF-5R-p7c" eventType="touchUpInside" id="3by-bM-U4A"/>
@@ -202,10 +203,10 @@ Picture of the Day</string>
                         <constraints>
                             <constraint firstItem="ndh-Da-5p0" firstAttribute="bottom" secondItem="JtZ-4l-JdF" secondAttribute="bottom" constant="20" id="6HR-ZQ-lM9"/>
                             <constraint firstItem="rrJ-52-gid" firstAttribute="trailing" secondItem="ndh-Da-5p0" secondAttribute="trailing" id="8VE-TK-89M"/>
+                            <constraint firstAttribute="bottom" secondItem="rrJ-52-gid" secondAttribute="bottom" id="C1X-Mf-kfM"/>
                             <constraint firstItem="ndh-Da-5p0" firstAttribute="trailing" secondItem="JtZ-4l-JdF" secondAttribute="trailing" constant="20" id="LbK-VU-omw"/>
                             <constraint firstItem="rrJ-52-gid" firstAttribute="leading" secondItem="ndh-Da-5p0" secondAttribute="leading" id="cYG-ZC-Ao4"/>
                             <constraint firstItem="rrJ-52-gid" firstAttribute="top" secondItem="ndh-Da-5p0" secondAttribute="top" id="fip-NM-lYF"/>
-                            <constraint firstItem="ndh-Da-5p0" firstAttribute="bottom" secondItem="rrJ-52-gid" secondAttribute="bottom" id="odL-ea-TDF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ndh-Da-5p0"/>
                     </view>
