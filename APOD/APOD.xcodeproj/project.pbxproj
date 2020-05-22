@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046114602477A66600B56A4E /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461145F2477A66600B56A4E /* PhotoCollectionViewController.swift */; };
+		046114622477A67F00B56A4E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046114612477A67F00B56A4E /* OnboardingViewController.swift */; };
+		046114642477AB9200B56A4E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046114632477AB9200B56A4E /* Constants.swift */; };
+		046114662477B30800B56A4E /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046114652477B30800B56A4E /* PhotoCollectionViewCell.swift */; };
 		04E92FD1247717A30093A49A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FD0247717A30093A49A /* AppDelegate.swift */; };
 		04E92FD3247717A30093A49A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FD2247717A30093A49A /* SceneDelegate.swift */; };
 		04E92FD5247717A30093A49A /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FD4247717A30093A49A /* PhotoDetailViewController.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0461145F2477A66600B56A4E /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		046114612477A67F00B56A4E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		046114632477AB9200B56A4E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		046114652477B30800B56A4E /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		04E92FCD247717A30093A49A /* APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E92FD0247717A30093A49A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E92FD2247717A30093A49A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,8 +114,12 @@
 		04E92FF42477933D0093A49A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				04E92FE5247721260093A49A /* PhotoDescriptionTrayViewController.swift */,
+				046114612477A67F00B56A4E /* OnboardingViewController.swift */,
+				0461145F2477A66600B56A4E /* PhotoCollectionViewController.swift */,
+				046114652477B30800B56A4E /* PhotoCollectionViewCell.swift */,
+				046114632477AB9200B56A4E /* Constants.swift */,
 				04E92FD4247717A30093A49A /* PhotoDetailViewController.swift */,
+				04E92FE5247721260093A49A /* PhotoDescriptionTrayViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -194,14 +206,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E92FE6247721260093A49A /* PhotoDescriptionTrayViewController.swift in Sources */,
+				046114662477B30800B56A4E /* PhotoCollectionViewCell.swift in Sources */,
 				04E92FD5247717A30093A49A /* PhotoDetailViewController.swift in Sources */,
 				04E92FF1247792FC0093A49A /* NetworkingExtensions.swift in Sources */,
 				04E92FF2247792FC0093A49A /* ResultDecoder.swift in Sources */,
 				04E92FD1247717A30093A49A /* AppDelegate.swift in Sources */,
+				046114602477A66600B56A4E /* PhotoCollectionViewController.swift in Sources */,
 				04E92FEC24778BBB0093A49A /* Photo.m in Sources */,
 				04E92FF7247793950093A49A /* APODClient.swift in Sources */,
 				04E92FF0247792FC0093A49A /* NetworkingEnums.swift in Sources */,
+				046114622477A67F00B56A4E /* OnboardingViewController.swift in Sources */,
 				04E92FD3247717A30093A49A /* SceneDelegate.swift in Sources */,
+				046114642477AB9200B56A4E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
