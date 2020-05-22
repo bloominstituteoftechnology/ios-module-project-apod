@@ -9,6 +9,13 @@
 import Foundation
 
 class PhotoController {
+
+    // MARK: - Enums
+    private enum ServerErrors: Error {
+        case badResponse
+        case badData
+        case errorDecoding
+    }
     // MARK: - Properties
     private let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
     private let apiKey = "3MYY5NPWds1kZu7B3B7In88FKEHYXncJQkgBFNr6"
@@ -43,7 +50,7 @@ class PhotoController {
     /// Method will take care of fetching data from the server, parsing it, and storing it into controller's photos array.
     /// - Parameters:
     ///   - date: Date object for date desired
-    ///   - completion: Only returns nil when successful, otherwise it will return error if there's a server error.
+    ///   - completion: Only returns nil when successful. Error on server error. badResponse if successfully communicate with server, but does not return success. badData if data is corrupted. errorDecoding if couldn't decode server response.
     /// - Returns: FatalError if programmer error
     func fetchPhotoForDate(date: Date, completion: @escaping (Error?)->()) {
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)!
@@ -55,20 +62,35 @@ class PhotoController {
 
         let requestURL = urlComponents.url!
 
-        URLSession.shared.dataTask(with: requestURL) { data, _, error in
+        URLSession.shared.dataTask(with: requestURL) { data, response, error in
             if let error = error {
                 NSLog("Error receiving data for date(\(date)): \(error)")
                 completion(error)
             }
 
-            guard let data = data else { fatalError() }
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                NSLog("Server did not return a success(200) URL response, try again.")
+                completion(ServerErrors.badResponse)
+                return
+            }
+
+            guard let data = data else {
+                NSLog("Server did not return good data")
+                completion(ServerErrors.badData)
+                return
+            }
 
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String]
                 guard let jsonDate = json!["date"],
                 let explanation = json!["explanation"],
                 let jsonURL = json!["hdurl"],
-                let title = json!["title"] else { fatalError() }
+                let title = json!["title"] else {
+                    NSLog("Could not decode properties from JSon: \(String(describing: json))")
+                    completion(ServerErrors.errorDecoding)
+                    return
+                }
 
 
                 let url = URL(string: jsonURL)!
