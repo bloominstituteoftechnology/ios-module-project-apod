@@ -18,7 +18,7 @@ class PhotoDetailViewController: UIViewController {
     private var trayVC: PhotoDescriptionTrayViewController!
     private let trayClosedOffset: CGFloat = 68
     private var trayOpenOffset: CGFloat {
-        trayVC.view.frame.height - 25
+        trayVC.view.frame.height - 50
     }
     
     @IBOutlet private var trayConstraint: NSLayoutConstraint!
@@ -29,11 +29,12 @@ class PhotoDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        try? updateViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        try? updateViews()
+        
     }
     
     private func updateViews() throws {
