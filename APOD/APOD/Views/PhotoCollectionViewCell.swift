@@ -13,6 +13,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var dateLabel: UILabel!
     
+    var photoController: PhotoController?
     var photo: WHLPhoto? {
         didSet {
             setupViews()
@@ -20,6 +21,10 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupViews() {
+        guard let photo = photo else { return }
+        
+        dateLabel.text = photoController?.dateFormatter.string(from: photo.date)
+        
     }
     
 }

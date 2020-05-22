@@ -14,6 +14,7 @@ class PhotosViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     // MARK: - Properties
+    var currentMonth: [Date] = []
     let photoController = PhotoController()
     
     // MARK: - View Lifecycle
@@ -27,24 +28,29 @@ class PhotosViewController: UIViewController {
         }
         
         
-        let days = photoController.getDays(for: 1, in: 2020)
+        currentMonth = photoController.getDays(for: 1, in: 2020)
         
-        
-        for item in days {
-            
-            photoController.fetchPhotoForDate(date: item) { (error) in
-                if let error = error {
-                    NSLog("Error fetching photos \(error)")
-                    return
-                }
-                
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                    print(self.photoController.sortedPhotos.count)
-                }
-                
-            }
-        }
+//        for item in days {
+//
+//            photoController.fetchPhotoForDate(date: item) { (error) in
+//                if let error = error {
+//                    NSLog("Error fetching photos \(error)")
+//                    return
+//                }
+//
+//                DispatchQueue.main.async {
+//
+//                    print(self.photoController.sortedPhotos.count)
+//                    print(days.count)
+//
+//                    if self.photoController.sortedPhotos.count == days.count {
+//                        print("Reloading Collection View")
+//                        self.collectionView.reloadData()
+//                    }
+//                }
+//
+//            }
+//        }
         
     }
     
@@ -77,16 +83,27 @@ class PhotosViewController: UIViewController {
 
 extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photoController.sortedPhotos.count
+        return currentMonth.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCollectionViewCell else { return UICollectionViewCell() }
 
-        let photo = photoController.sortedPhotos[indexPath.row]
-        cell.photo = photo
-        loadImage(for: cell, with: photo)
-        cell.layer.cornerRadius = 8
+        photoController.fetchPhotoForDate(date: currentMonth[indexPath.row]) { (error) in
+            if let error = error {
+                NSLog("Error fetching photo for date: \(self.currentMonth[indexPath.row]) error: \(error)")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                guard let photo = self.photoController.sortedPhotos.filter ({ $0.date == self.currentMonth[indexPath.row] }).first else { fatalError() }
+                cell.photo = photo
+                cell.photoController = self.photoController
+                self.loadImage(for: cell, with: photo)
+            }
+            
+        }
+        
         
         return cell
     }

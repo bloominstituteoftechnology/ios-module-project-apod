@@ -115,6 +115,7 @@ class PhotoController {
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let error = error {
                 NSLog("Error fetching single photo(URL: \(url)) : \(error)")
+                return
             }
 
             guard let data = data else { fatalError() }
