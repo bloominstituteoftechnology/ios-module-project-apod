@@ -53,6 +53,9 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="lessthan" catalog="system" id="ckb-s5-e5X"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="greaterthan" catalog="system" id="GYG-R9-Kbp"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nasaCollectionView" destination="wP1-uC-zZF" id="HSw-eb-zrn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
