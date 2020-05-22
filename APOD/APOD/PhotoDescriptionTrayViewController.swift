@@ -9,7 +9,10 @@
 import UIKit
 
 class PhotoDescriptionTrayViewController: UIViewController {
+    
+    
+    
     @IBOutlet private var titleLabel: UILabel!
-    @IBOutlet var descriptionTextView: UITextView!
+    @IBOutlet private var descriptionTextView: UITextView!
     
 }
