@@ -28,8 +28,7 @@ class PhotoCollectionViewController: UICollectionViewController {
         
         nextButton.image = UIImage(systemName: "chevron.right", withConfiguration: UIImage.SymbolConfiguration.init(pointSize: 32, weight: .medium))
         nextButton.imageInsets = .init(top: 0, left: 0, bottom: 0, right: 40)
-        
-        
+ 
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -48,7 +47,7 @@ class PhotoCollectionViewController: UICollectionViewController {
         }
         
         cell.backgroundColor = darkCells.contains(indexPath.item) ? Colors.mediumGray : Colors.lightGray
-        
+        cell.dayLabel.text = "\(indexPath.item + 1)"
         return cell
     }
     

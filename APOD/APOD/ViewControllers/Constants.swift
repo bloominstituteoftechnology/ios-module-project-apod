@@ -9,7 +9,7 @@
 import UIKit
 
 enum Colors {
-    static let darkBlue = UIColor(named: "DarkBlue")
-    static let lightGray = UIColor(named: "LightGray")
-    static let mediumGray = UIColor(named: "MediumGray")
+    static let darkBlue = UIColor(named: "DarkBlue")!
+    static let lightGray = UIColor(named: "LightGray")!
+    static let mediumGray = UIColor(named: "MediumGray")!
 }

@@ -115,17 +115,40 @@ posted every day.</string>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="Qfb-H2-xT0">
                                             <rect key="frame" x="0.0" y="0.0" width="199" height="181"/>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxn-uG-aQT" userLabel="DayTag">
+                                            <rect key="frame" x="0.0" y="0.0" width="43" height="32"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndX-bv-4oV">
+                                                    <rect key="frame" x="12" y="0.0" width="19" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="DarkBlue"/>
+                                            <constraints>
+                                                <constraint firstItem="ndX-bv-4oV" firstAttribute="top" secondItem="wxn-uG-aQT" secondAttribute="top" id="5GQ-CZ-q3W"/>
+                                                <constraint firstAttribute="bottom" secondItem="ndX-bv-4oV" secondAttribute="bottom" id="5RS-o8-23E"/>
+                                                <constraint firstAttribute="trailing" secondItem="ndX-bv-4oV" secondAttribute="trailing" constant="12" id="7gP-un-88j"/>
+                                                <constraint firstItem="ndX-bv-4oV" firstAttribute="leading" secondItem="wxn-uG-aQT" secondAttribute="leading" constant="12" id="cO6-21-w5z"/>
+                                                <constraint firstAttribute="height" constant="32" id="xnr-LG-YOw"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Qfb-H2-xT0" firstAttribute="top" secondItem="09A-Yx-UmE" secondAttribute="top" id="HPF-EE-gHh"/>
                                         <constraint firstAttribute="bottom" secondItem="Qfb-H2-xT0" secondAttribute="bottom" id="LMG-Bd-R8B"/>
+                                        <constraint firstItem="wxn-uG-aQT" firstAttribute="top" secondItem="09A-Yx-UmE" secondAttribute="top" id="Yp6-T1-Ckg"/>
                                         <constraint firstItem="Qfb-H2-xT0" firstAttribute="leading" secondItem="09A-Yx-UmE" secondAttribute="leading" id="bFz-xj-suJ"/>
+                                        <constraint firstItem="wxn-uG-aQT" firstAttribute="leading" secondItem="09A-Yx-UmE" secondAttribute="leading" id="iUc-SU-OC9"/>
                                         <constraint firstAttribute="trailing" secondItem="Qfb-H2-xT0" secondAttribute="trailing" id="o1J-pb-xdY"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="199" height="181"/>
                                 <connections>
-                                    <outlet property="imageView" destination="09A-Yx-UmE" id="kOO-zY-3nZ"/>
+                                    <outlet property="dayLabel" destination="ndX-bv-4oV" id="SH7-VZ-UA8"/>
+                                    <outlet property="imageView" destination="Qfb-H2-xT0" id="ohL-ja-su1"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="mAK-zb-761"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -149,7 +172,7 @@ posted every day.</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOz-V4-57Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.724637681159422" y="101.78571428571428"/>
+            <point key="canvasLocation" x="75" y="102"/>
         </scene>
         <!--Photo Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -175,13 +198,14 @@ posted every day.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wWC-9K-vDH"/>
                     <connections>
                         <outlet property="trayConstraint" destination="xAm-6u-7fg" id="WZx-pt-PK6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+            <point key="canvasLocation" x="841" y="102"/>
         </scene>
         <!--Photo Description Tray View Controller-->
         <scene sceneID="Yry-dO-pKP">
@@ -263,7 +287,7 @@ posted every day.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQg-Jy-oaP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1675.3623188405797" y="76.339285714285708"/>
+            <point key="canvasLocation" x="-1480" y="102"/>
         </scene>
     </scenes>
     <resources>
