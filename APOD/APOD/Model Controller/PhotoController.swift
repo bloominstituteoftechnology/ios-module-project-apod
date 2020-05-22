@@ -85,7 +85,7 @@ class PhotoController {
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String]
                 guard let jsonDate = json!["date"],
                 let explanation = json!["explanation"],
-                let jsonURL = json!["hdurl"],
+                let jsonURL = json!["url"],
                 let title = json!["title"] else {
                     NSLog("Could not decode properties from JSon: \(String(describing: json))")
                     completion(ServerErrors.errorDecoding)
@@ -95,7 +95,7 @@ class PhotoController {
 
                 let url = URL(string: jsonURL)!
                 let date = self.dateFormatter.date(from: jsonDate)!
-                let newPhoto = WHLPhoto(title: title, explanation: explanation, date: date , hdurl: url)
+                let newPhoto = WHLPhoto(title: title, explanation: explanation, date: date , url: url)
                 self.photos.append(newPhoto)
             } catch {
                 NSLog("Failed to do something with json \(error)")

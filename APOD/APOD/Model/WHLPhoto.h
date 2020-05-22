@@ -15,9 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *title;
 @property (nonatomic, copy, readonly) NSString *explanation;
 @property (nonatomic, readonly) NSDate *date;
-@property (nonatomic, readonly) NSURL *hdurl;
+@property (nonatomic, readonly) NSURL *url;
 
-- (instancetype)initWithTitle:(NSString *)title explanation:(NSString *)explanation date:(NSDate *)date hdurl:(NSURL *)hdurl;
+- (instancetype)initWithTitle:(NSString *)title explanation:(NSString *)explanation date:(NSDate *)date url:(NSURL *)url;
 @end
 
 NS_ASSUME_NONNULL_END
