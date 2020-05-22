@@ -41,7 +41,7 @@ extension URLSession {
         }
     }
     
-    func dataTask(with request: URLRequest, resultHandler: @escaping (DataResult) -> Void) -> URLSessionDataTask {
+    func dataResultTask(with request: URLRequest, resultHandler: @escaping (DataResult) -> Void) -> URLSessionDataTask {
         
         self.dataTask(with: request) { data, response, error in
             

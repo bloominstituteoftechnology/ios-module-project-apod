@@ -10,7 +10,6 @@
 
 @interface Photo ()
 
-@property (class, nonatomic, readonly) NSDateFormatter *dateFormatter;
 
 @end
 

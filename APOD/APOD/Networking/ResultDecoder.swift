@@ -26,10 +26,29 @@ extension ResultDecoder {
     }
 }
 
-struct CalorieEntryResultDecoder: ResultDecoder {
-    typealias ResultType = [String: CalorieEntryRepresentation]
+struct PhotoResultDecoder: ResultDecoder {
+    typealias ResultType = Photo
     
-    var transform = { data in
-        try JSONDecoder().decode([String: CalorieEntryRepresentation].self, from: data)
+    var transform: (Data) throws -> ResultType = { data in
+        guard let dict = try JSONSerialization
+            .jsonObject(with: data, options: .allowFragments) as? Dictionary<AnyHashable, Any> else {
+                throw NetworkError.decodingError(NSError(domain: "Error decoding photo", code: 0))
+        }
+        
+        let photo = Photo(dictionary: dict)
+        
+        return photo
+    }
+}
+
+struct ImageResultDecoder: ResultDecoder {
+    typealias ResultType = UIImage
+    
+    var transform: (Data) throws -> UIImage = { data in
+        guard let image = UIImage(data: data) else {
+            throw NetworkError.badData
+        }
+        
+        return image
     }
 }

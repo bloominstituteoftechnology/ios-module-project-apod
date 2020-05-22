@@ -18,6 +18,7 @@
 		04E92FF0247792FC0093A49A /* NetworkingEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FED247792FC0093A49A /* NetworkingEnums.swift */; };
 		04E92FF1247792FC0093A49A /* NetworkingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FEE247792FC0093A49A /* NetworkingExtensions.swift */; };
 		04E92FF2247792FC0093A49A /* ResultDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FEF247792FC0093A49A /* ResultDecoder.swift */; };
+		04E92FF7247793950093A49A /* APODClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92FF6247793950093A49A /* APODClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		04E92FED247792FC0093A49A /* NetworkingEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingEnums.swift; sourceTree = "<group>"; };
 		04E92FEE247792FC0093A49A /* NetworkingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingExtensions.swift; sourceTree = "<group>"; };
 		04E92FEF247792FC0093A49A /* ResultDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultDecoder.swift; sourceTree = "<group>"; };
+		04E92FF6247793950093A49A /* APODClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		04E92FF3247793120093A49A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				04E92FF6247793950093A49A /* APODClient.swift */,
 				04E92FED247792FC0093A49A /* NetworkingEnums.swift */,
 				04E92FEE247792FC0093A49A /* NetworkingExtensions.swift */,
 				04E92FEF247792FC0093A49A /* ResultDecoder.swift */,
@@ -196,6 +199,7 @@
 				04E92FF2247792FC0093A49A /* ResultDecoder.swift in Sources */,
 				04E92FD1247717A30093A49A /* AppDelegate.swift in Sources */,
 				04E92FEC24778BBB0093A49A /* Photo.m in Sources */,
+				04E92FF7247793950093A49A /* APODClient.swift in Sources */,
 				04E92FF0247792FC0093A49A /* NetworkingEnums.swift in Sources */,
 				04E92FD3247717A30093A49A /* SceneDelegate.swift in Sources */,
 			);
