@@ -10,20 +10,36 @@ import UIKit
 
 class PhotoDetailViewController: UIViewController {
 
+    // MARK: - Public Properties
+    var photo: Photo?
     
-    // MARK: - Tray Properties
+    // MARK: - Private Properties
     
     private var trayVC: PhotoDescriptionTrayViewController!
-    @IBOutlet private var trayConstraint: NSLayoutConstraint!
     private let trayClosedOffset: CGFloat = 68
     private var trayOpenOffset: CGFloat {
         trayVC.view.frame.height - 25
     }
     
+    @IBOutlet private var trayConstraint: NSLayoutConstraint!
+    @IBOutlet var imageView: UIImageView!
+    
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        try? updateViews()
+    }
+    
+    private func updateViews() throws {
+        guard let photo = photo, let url = photo.hdURL else { return }
+        trayVC.photo = photo
+        imageView.image = UIImage(data: try Data(contentsOf: url))
     }
     
     // MARK: - Embed

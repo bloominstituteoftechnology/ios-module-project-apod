@@ -64,6 +64,13 @@ class PhotoCollectionViewController: UICollectionViewController {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let photoDetailVC = segue.destination as? PhotoDetailViewController,
+            let indexPath = collectionView.indexPathsForSelectedItems?.first {
+            photoDetailVC.photo = photos[indexPath.row]
+        }
+    }
 }
 
 extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
