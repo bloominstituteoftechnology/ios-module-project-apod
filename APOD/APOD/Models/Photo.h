@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, nullable) NSString *copyright;
 @property (nonatomic, readonly) NSString *mediaType;
 
-@property (class, nonatomic, readonly) NSDateFormatter *dateFormatter;
+@property (class, nonatomic, readonly) NSISO8601DateFormatter *dateFormatter;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

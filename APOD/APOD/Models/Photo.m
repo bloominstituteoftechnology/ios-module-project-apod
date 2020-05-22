@@ -15,13 +15,13 @@
 
 @implementation Photo
 
-static NSDateFormatter *_dateFormatter;
+static NSISO8601DateFormatter *_dateFormatter;
 
-+ (NSDateFormatter *)dateFormatter {
++ (NSISO8601DateFormatter *)dateFormatter {
     if (!_dateFormatter) {
-        _dateFormatter = [[NSDateFormatter alloc] init];
-        NSLocale *locale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
-        _dateFormatter.dateFormat = [NSDateFormatter dateFormatFromTemplate:@"yyyy-MM-dd" options:0 locale:locale];
+        
+        _dateFormatter = [[NSISO8601DateFormatter alloc] init];
+        _dateFormatter.formatOptions = NSISO8601DateFormatWithFullDate;
     }
     
     return _dateFormatter;

@@ -9,7 +9,14 @@
 import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var imageView: UIView!
+    
+    var photo: Photo? { didSet { try? updateViews() }}
+    
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var dayLabel: UILabel!
     
+    private func updateViews() throws {
+        guard let photo = photo, let url = photo.url else { return }
+        imageView.image = UIImage(data: try Data(contentsOf: url))
+    }
 }
