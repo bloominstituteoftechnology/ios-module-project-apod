@@ -16,6 +16,7 @@ class PhotosViewController: UIViewController {
     // MARK: - Properties
     var currentMonth: [Date] = []
     let photoController = PhotoController()
+    var month: Int = 1
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -27,30 +28,8 @@ class PhotosViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "firstLaunch")
         }
         
-        
-        currentMonth = photoController.getDays(for: 1, in: 2020)
-        
-//        for item in days {
-//
-//            photoController.fetchPhotoForDate(date: item) { (error) in
-//                if let error = error {
-//                    NSLog("Error fetching photos \(error)")
-//                    return
-//                }
-//
-//                DispatchQueue.main.async {
-//
-//                    print(self.photoController.sortedPhotos.count)
-//                    print(days.count)
-//
-//                    if self.photoController.sortedPhotos.count == days.count {
-//                        print("Reloading Collection View")
-//                        self.collectionView.reloadData()
-//                    }
-//                }
-//
-//            }
-//        }
+        title = "January"
+        currentMonth = photoController.getDays(for: month, in: 2020)
         
     }
     
@@ -65,7 +44,7 @@ class PhotosViewController: UIViewController {
     }
     
     private func loadImage(for cell: PhotoCollectionViewCell, with photo: WHLPhoto) {
-        photoController.fetchPhotoData(url: photo.hdurl) { (data, error) in
+        photoController.fetchPhotoData(url: photo.url) { (data, error) in
             if let error = error {
                 NSLog("Error fetching photos \(error)")
                 return

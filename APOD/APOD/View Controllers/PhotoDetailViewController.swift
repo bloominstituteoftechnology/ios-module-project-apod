@@ -28,7 +28,7 @@ class PhotoDetailViewController: UIViewController {
     private func updateViews() {
         guard let photo = photo else { return }
         
-        photoController?.fetchPhotoData(url: photo.hdurl) { (data, error) in
+        photoController?.fetchPhotoData(url: photo.url) { (data, error) in
             if let error = error {
                 NSLog("Error fetching photos \(error)")
                 return
