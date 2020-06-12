@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fLJ-il-FKA">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Onboarding-->
         <scene sceneID="DFJ-jb-d1I">
             <objects>
-                <viewController id="fLJ-il-FKA" sceneMemberID="viewController">
+                <viewController id="fLJ-il-FKA" userLabel="Onboarding" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohE-zK-CF6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-screen" translatesAutoresizingMaskIntoConstraints="NO" id="hyi-av-k9A">
-                                <rect key="frame" x="0.0" y="44" width="375" height="508"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="433.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hyi-av-k9A" secondAttribute="height" multiplier="375:508" id="RW5-Qv-PK3"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rE8-0I-adJ" userLabel="Spacer View">
-                                <rect key="frame" x="0.0" y="129.33333333333334" width="375" height="337.33333333333326"/>
+                                <rect key="frame" x="0.0" y="72.5" width="320" height="288"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rE8-0I-adJ" secondAttribute="height" multiplier="1:0.9" id="hTD-ch-uM7"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Astronomy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6Q-0c-Eb8" userLabel="Title Label">
-                                <rect key="frame" x="20" y="86.333333333333329" width="335" height="42.999999999999986"/>
+                                <rect key="frame" x="20" y="29.5" width="280" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWD-QZ-tub" userLabel="Welcome Label">
-                                <rect key="frame" x="20" y="466.66666666666669" width="335" height="57.333333333333314"/>
+                                <rect key="frame" x="20" y="360.5" width="280" height="57.5"/>
                                 <string key="text">Welcome to Astronomy
 Picture of the Day</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
@@ -43,20 +44,20 @@ Picture of the Day</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where you can browse stellar photos posted every day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-sz-nDo" userLabel="Detail Label">
-                                <rect key="frame" x="20" y="524" width="319" height="40.666666666666629"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="418" width="264" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYG-eS-v1G" userLabel="Continue Button">
-                                <rect key="frame" x="20" y="584.66666666666663" width="335" height="46"/>
+                                <rect key="frame" x="20" y="481" width="280" height="46"/>
                                 <color key="backgroundColor" red="0.56078431370000004" green="0.76470588240000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="DpD-tm-Cok"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Check it out!">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.070588235294117646" green="0.094117647058823528" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -93,8 +94,107 @@ Picture of the Day</string>
             </objects>
             <point key="canvasLocation" x="54" y="100"/>
         </scene>
+        <!--Monthly Collection VC-->
+        <scene sceneID="wXa-MB-xb8">
+            <objects>
+                <viewController id="YVb-iY-fhy" userLabel="Monthly Collection VC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iHf-Ik-g0g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dfb-Bk-V6b" userLabel="Header Stack View">
+                                <rect key="frame" x="38.5" y="12" width="243" height="43"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKj-ZE-Whr" userLabel="Previous Month Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="26.5" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" image="chevron.left" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8S-dT-g53" userLabel="Month Label">
+                                        <rect key="frame" x="34.5" y="0.0" width="174" height="43"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgT-aX-eMf" userLabel="Next Month Button">
+                                        <rect key="frame" x="216.5" y="0.0" width="26.5" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" image="chevron.right" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b1u-ZZ-e74">
+                                <rect key="frame" x="0.0" y="67" width="320" height="501"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sKd-hC-rLr">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="48c-yB-rfz">
+                                        <rect key="frame" x="66" y="0.0" width="188" height="173"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mpa-Jq-YKQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="188" height="173"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="7wN-tn-o1t" userLabel="Image">
+                                                    <rect key="frame" x="0.0" y="0.0" width="188" height="173"/>
+                                                    <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liC-I5-f8P" userLabel="Date Label">
+                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="20.5"/>
+                                                    <color key="backgroundColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="7wN-tn-o1t" secondAttribute="trailing" id="7je-A0-3x2"/>
+                                                <constraint firstItem="7wN-tn-o1t" firstAttribute="top" secondItem="mpa-Jq-YKQ" secondAttribute="top" id="I7X-ce-lrc"/>
+                                                <constraint firstAttribute="bottom" secondItem="7wN-tn-o1t" secondAttribute="bottom" id="RNa-2G-TKZ"/>
+                                                <constraint firstItem="liC-I5-f8P" firstAttribute="top" secondItem="mpa-Jq-YKQ" secondAttribute="top" id="S4w-Gf-yT5"/>
+                                                <constraint firstItem="7wN-tn-o1t" firstAttribute="leading" secondItem="mpa-Jq-YKQ" secondAttribute="leading" id="WXt-Iy-p9R"/>
+                                                <constraint firstItem="liC-I5-f8P" firstAttribute="leading" secondItem="mpa-Jq-YKQ" secondAttribute="leading" id="dyS-1E-GFf"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="b1u-ZZ-e74" secondAttribute="bottom" id="3pr-Vt-uXY"/>
+                            <constraint firstItem="b1u-ZZ-e74" firstAttribute="leading" secondItem="cRZ-bD-v1i" secondAttribute="leading" id="PMf-87-Chx"/>
+                            <constraint firstItem="b1u-ZZ-e74" firstAttribute="top" secondItem="Dfb-Bk-V6b" secondAttribute="bottom" constant="12" id="bmr-TN-63x"/>
+                            <constraint firstItem="Dfb-Bk-V6b" firstAttribute="top" secondItem="cRZ-bD-v1i" secondAttribute="top" constant="12" id="can-dM-meD"/>
+                            <constraint firstItem="Dfb-Bk-V6b" firstAttribute="centerX" secondItem="cRZ-bD-v1i" secondAttribute="centerX" id="lJ6-ko-fqg"/>
+                            <constraint firstItem="b1u-ZZ-e74" firstAttribute="trailing" secondItem="cRZ-bD-v1i" secondAttribute="trailing" id="zC0-u9-3JD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cRZ-bD-v1i"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3sm-Xw-Gya"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNk-jN-xUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.75" y="99.295774647887328"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="planet" width="188" height="173"/>
         <image name="splash-screen" width="375" height="508"/>
     </resources>
 </document>
