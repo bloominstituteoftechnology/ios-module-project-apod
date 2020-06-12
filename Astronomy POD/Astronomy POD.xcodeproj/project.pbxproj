@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		638B7BCA24942CA000A3F7CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B7BC924942CA000A3F7CB /* AppDelegate.m */; };
 		638B7BCD24942CA000A3F7CB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B7BCC24942CA000A3F7CB /* SceneDelegate.m */; };
-		638B7BD024942CA000A3F7CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B7BCF24942CA000A3F7CB /* ViewController.m */; };
 		638B7BD324942CA000A3F7CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD124942CA000A3F7CB /* Main.storyboard */; };
 		638B7BD524942CA300A3F7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD424942CA300A3F7CB /* Assets.xcassets */; };
 		638B7BD824942CA300A3F7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD624942CA300A3F7CB /* LaunchScreen.storyboard */; };
@@ -22,8 +21,6 @@
 		638B7BC924942CA000A3F7CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		638B7BCB24942CA000A3F7CB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		638B7BCC24942CA000A3F7CB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		638B7BCE24942CA000A3F7CB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		638B7BCF24942CA000A3F7CB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		638B7BD224942CA000A3F7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		638B7BD424942CA300A3F7CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		638B7BD724942CA300A3F7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,19 +58,33 @@
 		638B7BC724942CA000A3F7CB /* Astronomy POD */ = {
 			isa = PBXGroup;
 			children = (
+				638B7BE124942CE400A3F7CB /* Storyboards */,
+				638B7BE224942CF700A3F7CB /* Resources */,
+			);
+			path = "Astronomy POD";
+			sourceTree = "<group>";
+		};
+		638B7BE124942CE400A3F7CB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				638B7BD124942CA000A3F7CB /* Main.storyboard */,
+				638B7BD624942CA300A3F7CB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		638B7BE224942CF700A3F7CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				638B7BC824942CA000A3F7CB /* AppDelegate.h */,
 				638B7BC924942CA000A3F7CB /* AppDelegate.m */,
 				638B7BCB24942CA000A3F7CB /* SceneDelegate.h */,
 				638B7BCC24942CA000A3F7CB /* SceneDelegate.m */,
-				638B7BCE24942CA000A3F7CB /* ViewController.h */,
-				638B7BCF24942CA000A3F7CB /* ViewController.m */,
-				638B7BD124942CA000A3F7CB /* Main.storyboard */,
 				638B7BD424942CA300A3F7CB /* Assets.xcassets */,
-				638B7BD624942CA300A3F7CB /* LaunchScreen.storyboard */,
 				638B7BD924942CA300A3F7CB /* Info.plist */,
 				638B7BDA24942CA300A3F7CB /* main.m */,
 			);
-			path = "Astronomy POD";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +157,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				638B7BD024942CA000A3F7CB /* ViewController.m in Sources */,
 				638B7BCA24942CA000A3F7CB /* AppDelegate.m in Sources */,
 				638B7BDB24942CA300A3F7CB /* main.m in Sources */,
 				638B7BCD24942CA000A3F7CB /* SceneDelegate.m in Sources */,
@@ -291,7 +301,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3BQB6FYF6S;
-				INFOPLIST_FILE = "Astronomy POD/Info.plist";
+				INFOPLIST_FILE = "Astronomy POD/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3BQB6FYF6S;
-				INFOPLIST_FILE = "Astronomy POD/Info.plist";
+				INFOPLIST_FILE = "Astronomy POD/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
