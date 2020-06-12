@@ -58,6 +58,8 @@
 		638B7BC724942CA000A3F7CB /* Astronomy POD */ = {
 			isa = PBXGroup;
 			children = (
+				638B7BE424942DE700A3F7CB /* View Controllers */,
+				638B7BE324942DD400A3F7CB /* Model */,
 				638B7BE124942CE400A3F7CB /* Storyboards */,
 				638B7BE224942CF700A3F7CB /* Resources */,
 			);
@@ -85,6 +87,20 @@
 				638B7BDA24942CA300A3F7CB /* main.m */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		638B7BE324942DD400A3F7CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		638B7BE424942DE700A3F7CB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
