@@ -1,8 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fLJ-il-FKA">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="DFJ-jb-d1I">
+            <objects>
+                <viewController id="fLJ-il-FKA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ohE-zK-CF6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-screen" translatesAutoresizingMaskIntoConstraints="NO" id="hyi-av-k9A">
+                                <rect key="frame" x="0.0" y="44" width="375" height="508"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hyi-av-k9A" secondAttribute="height" multiplier="375:508" id="RW5-Qv-PK3"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rE8-0I-adJ" userLabel="Spacer View">
+                                <rect key="frame" x="0.0" y="129.33333333333334" width="375" height="337.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rE8-0I-adJ" secondAttribute="height" multiplier="1:0.9" id="hTD-ch-uM7"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Astronomy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6Q-0c-Eb8" userLabel="Title Label">
+                                <rect key="frame" x="20" y="86.333333333333329" width="335" height="42.999999999999986"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWD-QZ-tub" userLabel="Welcome Label">
+                                <rect key="frame" x="20" y="466.66666666666669" width="335" height="57.333333333333314"/>
+                                <string key="text">Welcome to Astronomy
+Picture of the Day</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where you can browse stellar photos posted every day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-sz-nDo" userLabel="Detail Label">
+                                <rect key="frame" x="20" y="524" width="319" height="40.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYG-eS-v1G" userLabel="Continue Button">
+                                <rect key="frame" x="20" y="584.66666666666663" width="335" height="46"/>
+                                <color key="backgroundColor" red="0.56078431370000004" green="0.76470588240000004" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="DpD-tm-Cok"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Check it out!">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nCr-K6-ker" firstAttribute="trailing" secondItem="r6Q-0c-Eb8" secondAttribute="trailing" constant="20" id="1fE-vt-PsS"/>
+                            <constraint firstItem="rE8-0I-adJ" firstAttribute="centerY" secondItem="hyi-av-k9A" secondAttribute="centerY" id="26q-Xi-2OJ"/>
+                            <constraint firstItem="bOg-sz-nDo" firstAttribute="top" secondItem="xWD-QZ-tub" secondAttribute="bottom" id="38d-4H-2om"/>
+                            <constraint firstItem="rE8-0I-adJ" firstAttribute="leading" secondItem="nCr-K6-ker" secondAttribute="leading" id="4NP-Qp-344"/>
+                            <constraint firstItem="r6Q-0c-Eb8" firstAttribute="leading" secondItem="nCr-K6-ker" secondAttribute="leading" constant="20" id="4UU-6w-h4I"/>
+                            <constraint firstItem="hYG-eS-v1G" firstAttribute="leading" secondItem="nCr-K6-ker" secondAttribute="leading" constant="20" id="9Fq-VQ-lb0"/>
+                            <constraint firstItem="hYG-eS-v1G" firstAttribute="top" secondItem="bOg-sz-nDo" secondAttribute="bottom" constant="20" id="9RV-jt-npg"/>
+                            <constraint firstItem="nCr-K6-ker" firstAttribute="trailing" secondItem="hYG-eS-v1G" secondAttribute="trailing" constant="20" id="PlE-nO-I7X"/>
+                            <constraint firstItem="nCr-K6-ker" firstAttribute="trailing" secondItem="hyi-av-k9A" secondAttribute="trailing" id="QeC-Kn-VmR"/>
+                            <constraint firstItem="nCr-K6-ker" firstAttribute="trailing" secondItem="rE8-0I-adJ" secondAttribute="trailing" id="RwY-er-AbY"/>
+                            <constraint firstItem="nCr-K6-ker" firstAttribute="trailing" secondItem="xWD-QZ-tub" secondAttribute="trailing" constant="20" id="VEP-4x-coc"/>
+                            <constraint firstItem="rE8-0I-adJ" firstAttribute="top" secondItem="r6Q-0c-Eb8" secondAttribute="bottom" id="aqs-QA-731"/>
+                            <constraint firstItem="xWD-QZ-tub" firstAttribute="top" secondItem="rE8-0I-adJ" secondAttribute="bottom" id="cGU-XB-ghi"/>
+                            <constraint firstItem="bOg-sz-nDo" firstAttribute="leading" secondItem="nCr-K6-ker" secondAttribute="leading" constant="20" id="cXR-CP-cfc"/>
+                            <constraint firstItem="hyi-av-k9A" firstAttribute="leading" secondItem="nCr-K6-ker" secondAttribute="leading" id="dxv-kh-xlb"/>
+                            <constraint firstItem="xWD-QZ-tub" firstAttribute="leading" secondItem="nCr-K6-ker" secondAttribute="leading" constant="20" id="gC1-nS-WO5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bOg-sz-nDo" secondAttribute="trailing" constant="20" id="v8O-Dl-oM8"/>
+                            <constraint firstItem="hyi-av-k9A" firstAttribute="top" secondItem="nCr-K6-ker" secondAttribute="top" id="yae-Ro-gq9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nCr-K6-ker"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4uX-lK-DTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="100"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash-screen" width="375" height="508"/>
+    </resources>
 </document>
