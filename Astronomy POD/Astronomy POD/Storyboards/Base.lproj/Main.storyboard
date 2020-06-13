@@ -151,11 +151,11 @@ Picture of the Day</string>
                                             <rect key="frame" x="0.0" y="0.0" width="188" height="173"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="7wN-tn-o1t" userLabel="Image">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="7wN-tn-o1t" userLabel="Image View">
                                                     <rect key="frame" x="0.0" y="0.0" width="188" height="173"/>
                                                     <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9t-Yd-tgb">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9t-Yd-tgb" userLabel="Date Tag View">
                                                     <rect key="frame" x="0.0" y="0.0" width="42" height="28.333333333333332"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liC-I5-f8P" userLabel="Date Label">
@@ -216,11 +216,51 @@ Picture of the Day</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="Jsp-S2-eWn" userLabel="Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="Jsp-S2-eWn" userLabel="Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4E-xy-qAa">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wue-It-fLi" userLabel="Header View">
+                                <rect key="frame" x="20" y="20" width="374" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mx-rB-c7N" userLabel="Back Button">
+                                        <rect key="frame" x="0.0" y="4.6666666666666679" width="26" height="36"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="chevron.left" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December 4, 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5I-Rt-FmU" userLabel="Date Label">
+                                        <rect key="frame" x="112" y="11.666666666666668" width="150" height="22.000000000000004"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ot3-6p-vV3" userLabel="Share Button">
+                                        <rect key="frame" x="334" y="0.0" width="40" height="45"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="square.and.arrow.up" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="S5I-Rt-FmU" firstAttribute="centerY" secondItem="Wue-It-fLi" secondAttribute="centerY" id="5i9-Db-ec7"/>
+                                    <constraint firstItem="6mx-rB-c7N" firstAttribute="centerY" secondItem="Wue-It-fLi" secondAttribute="centerY" id="AlD-1P-Z2x"/>
+                                    <constraint firstItem="Ot3-6p-vV3" firstAttribute="top" secondItem="Wue-It-fLi" secondAttribute="top" id="Op6-TN-XKZ"/>
+                                    <constraint firstItem="6mx-rB-c7N" firstAttribute="leading" secondItem="Wue-It-fLi" secondAttribute="leading" id="R9o-an-2nh"/>
+                                    <constraint firstItem="S5I-Rt-FmU" firstAttribute="centerX" secondItem="Wue-It-fLi" secondAttribute="centerX" id="Tbp-be-vCX"/>
+                                    <constraint firstItem="Ot3-6p-vV3" firstAttribute="height" secondItem="6mx-rB-c7N" secondAttribute="height" multiplier="1.25" id="lWJ-Ji-edB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ot3-6p-vV3" secondAttribute="trailing" id="o71-Hw-dkP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ot3-6p-vV3" secondAttribute="bottom" id="qit-7T-Gok"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4E-xy-qAa" userLabel="Model View">
                                 <rect key="frame" x="0.0" y="665" width="414" height="487"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTO-gb-Dnb" userLabel="Handle View">
@@ -275,6 +315,9 @@ Picture of the Day</string>
                             <constraint firstItem="Jsp-S2-eWn" firstAttribute="leading" secondItem="enN-oV-qh1" secondAttribute="leading" id="J1H-Y6-0gp"/>
                             <constraint firstItem="Jsp-S2-eWn" firstAttribute="bottom" secondItem="enN-oV-qh1" secondAttribute="bottom" id="PIM-aT-3au"/>
                             <constraint firstItem="z4E-xy-qAa" firstAttribute="top" secondItem="enN-oV-qh1" secondAttribute="bottom" constant="-71" id="S05-Au-VbU"/>
+                            <constraint firstItem="Wue-It-fLi" firstAttribute="leading" secondItem="enN-oV-qh1" secondAttribute="leading" constant="20" id="nOb-02-ocE"/>
+                            <constraint firstItem="Wue-It-fLi" firstAttribute="top" secondItem="enN-oV-qh1" secondAttribute="top" constant="20" id="o2e-7P-Fcs"/>
+                            <constraint firstItem="enN-oV-qh1" firstAttribute="trailing" secondItem="Wue-It-fLi" secondAttribute="trailing" constant="20" id="oUt-Bo-FZu"/>
                             <constraint firstItem="z4E-xy-qAa" firstAttribute="leading" secondItem="enN-oV-qh1" secondAttribute="leading" id="yDC-Ey-NEr"/>
                             <constraint firstItem="Jsp-S2-eWn" firstAttribute="trailing" secondItem="enN-oV-qh1" secondAttribute="trailing" id="z1H-XF-o9c"/>
                             <constraint firstItem="Jsp-S2-eWn" firstAttribute="top" secondItem="enN-oV-qh1" secondAttribute="top" id="zRB-iT-Zun"/>
@@ -293,5 +336,6 @@ Picture of the Day</string>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="planet" width="188" height="173"/>
         <image name="splash-screen" width="375" height="508"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>
