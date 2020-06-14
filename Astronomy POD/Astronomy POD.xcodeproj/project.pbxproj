@@ -13,6 +13,7 @@
 		638B7BD524942CA300A3F7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD424942CA300A3F7CB /* Assets.xcassets */; };
 		638B7BD824942CA300A3F7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD624942CA300A3F7CB /* LaunchScreen.storyboard */; };
 		638B7BDB24942CA300A3F7CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B7BDA24942CA300A3F7CB /* main.m */; };
+		63B7B7412496AAA30011DBD8 /* DTWAstronomyPODClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		638B7BD724942CA300A3F7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		638B7BD924942CA300A3F7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		638B7BDA24942CA300A3F7CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63B7B73F2496AAA20011DBD8 /* DTWAstronomyPODClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWAstronomyPODClient.h; sourceTree = "<group>"; };
+		63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWAstronomyPODClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 			children = (
 				638B7BE324942DD400A3F7CB /* Model */,
 				638B7BE424942DE700A3F7CB /* View Controllers */,
+				63B7B73E2496AA4E0011DBD8 /* Networking */,
 				638B7BE124942CE400A3F7CB /* Storyboards */,
 				638B7BE224942CF700A3F7CB /* Resources */,
 			);
@@ -101,6 +105,15 @@
 			children = (
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		63B7B73E2496AA4E0011DBD8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				63B7B73F2496AAA20011DBD8 /* DTWAstronomyPODClient.h */,
+				63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +189,7 @@
 				638B7BCA24942CA000A3F7CB /* AppDelegate.m in Sources */,
 				638B7BDB24942CA300A3F7CB /* main.m in Sources */,
 				638B7BCD24942CA000A3F7CB /* SceneDelegate.m in Sources */,
+				63B7B7412496AAA30011DBD8 /* DTWAstronomyPODClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
