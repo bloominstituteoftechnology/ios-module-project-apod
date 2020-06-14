@@ -8,10 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface APODPicture : NSObject
 
-@end
+@property (nonatomic, copy, readonly, nonnull) NSString *dateString;
+@property (nonatomic, copy, readonly, nonnull) NSString *urlString;
+@property (nonatomic, copy, readonly, nonnull) NSString *title;
+@property (nonatomic, copy, readonly, nonnull) NSString *explanation;   // "YYYY-MM-DD"
+@property (nonatomic, copy, readonly, nonnull) NSString *mediaType;     // key: "media_type"
 
-NS_ASSUME_NONNULL_END
+- (nonnull instancetype)initWithDateString:(nonnull NSString *)dateString
+                                 urlString:(nonnull NSString *)urlString
+                                     title:(nonnull NSString *)title
+                               explanation:(nonnull NSString *)explanation
+                                 mediaType:(nonnull NSString *)mediaType;
+
+- (nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dictionary;
+
+@end
