@@ -10,4 +10,6 @@
 
 @interface NSURL (Secure)
 
+- (nullable NSURL *)URLUsingHTTPS;
+
 @end
