@@ -18,6 +18,7 @@
 		63B7B7472496ABD00011DBD8 /* APODCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7462496ABD00011DBD8 /* APODCollectionViewController.swift */; };
 		63B7B7492496AC210011DBD8 /* APODDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7482496AC210011DBD8 /* APODDetailViewController.swift */; };
 		63B7B74D2496BBEC0011DBD8 /* APODFetchPictureOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B74C2496BBEC0011DBD8 /* APODFetchPictureOperation.m */; };
+		63B7B7542496BDE70011DBD8 /* NSURL+Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7532496BDE70011DBD8 /* NSURL+Secure.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		63B7B7482496AC210011DBD8 /* APODDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODDetailViewController.swift; sourceTree = "<group>"; };
 		63B7B74B2496BBEC0011DBD8 /* APODFetchPictureOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APODFetchPictureOperation.h; sourceTree = "<group>"; };
 		63B7B74C2496BBEC0011DBD8 /* APODFetchPictureOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APODFetchPictureOperation.m; sourceTree = "<group>"; };
+		63B7B7522496BDE70011DBD8 /* NSURL+Secure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+Secure.h"; sourceTree = "<group>"; };
+		63B7B7532496BDE70011DBD8 /* NSURL+Secure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Secure.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,7 @@
 				638B7BE424942DE700A3F7CB /* View Controllers */,
 				63B7B73E2496AA4E0011DBD8 /* Networking */,
 				63B7B74A2496BB9D0011DBD8 /* Operations */,
+				63B7B74E2496BD590011DBD8 /* Utililties */,
 				638B7BE124942CE400A3F7CB /* Storyboards */,
 				638B7BE224942CF700A3F7CB /* Resources */,
 			);
@@ -140,6 +144,15 @@
 				63B7B74C2496BBEC0011DBD8 /* APODFetchPictureOperation.m */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		63B7B74E2496BD590011DBD8 /* Utililties */ = {
+			isa = PBXGroup;
+			children = (
+				63B7B7522496BDE70011DBD8 /* NSURL+Secure.h */,
+				63B7B7532496BDE70011DBD8 /* NSURL+Secure.m */,
+			);
+			path = Utililties;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +230,7 @@
 				63B7B74D2496BBEC0011DBD8 /* APODFetchPictureOperation.m in Sources */,
 				638B7BCA24942CA000A3F7CB /* AppDelegate.m in Sources */,
 				63B7B7442496AB390011DBD8 /* APODPicture.m in Sources */,
+				63B7B7542496BDE70011DBD8 /* NSURL+Secure.m in Sources */,
 				638B7BDB24942CA300A3F7CB /* main.m in Sources */,
 				638B7BCD24942CA000A3F7CB /* SceneDelegate.m in Sources */,
 				63B7B7472496ABD00011DBD8 /* APODCollectionViewController.swift in Sources */,
