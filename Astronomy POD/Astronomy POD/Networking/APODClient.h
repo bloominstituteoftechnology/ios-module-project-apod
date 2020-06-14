@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class APODPicture;
+
+typedef void(^APODFetcherCompletionHandler)(APODPicture *_Nullable APODPicture, NSError *_Nullable error);
 
 @interface APODClient : NSObject
 
-@end
+- (void)fetchPODWithDateString:(nonnull NSString *)dateString
+             completionHandler:(nonnull APODFetcherCompletionHandler)completionHandler;
 
-NS_ASSUME_NONNULL_END
+@end
