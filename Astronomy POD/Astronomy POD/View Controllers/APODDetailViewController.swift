@@ -10,6 +10,13 @@ import UIKit
 
 class APODDetailViewController: UIViewController {
 
+    // IBOutlets
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +24,12 @@ class APODDetailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // IBActions
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        
     }
-    */
-
+    
+    @IBAction func shareButtonTapped(_ sender: UIButton) {
+        
+    }
 }

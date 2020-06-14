@@ -100,7 +100,7 @@ Picture of the Day</string>
         <!--Monthly Collection VC-->
         <scene sceneID="wXa-MB-xb8">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="YVb-iY-fhy" userLabel="Monthly Collection VC" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="YVb-iY-fhy" userLabel="Monthly Collection VC" customClass="APODCollectionViewController" customModule="Astronomy_POD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iHf-Ik-g0g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@ Picture of the Day</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="48c-yB-rfz">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="APODCell" id="48c-yB-rfz" customClass="APODCollectionViewCell" customModule="Astronomy_POD" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="188" height="173"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mpa-Jq-YKQ">
@@ -184,10 +184,16 @@ Picture of the Day</string>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="liC-I5-f8P" id="s9J-z8-cdn"/>
+                                            <outlet property="imageView" destination="7wN-tn-o1t" id="crL-4l-GKc"/>
                                             <segue destination="wkB-9V-6U2" kind="show" id="Bc6-n9-IpF"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="YVb-iY-fhy" id="75d-bd-kW7"/>
+                                    <outlet property="delegate" destination="YVb-iY-fhy" id="Lu3-IX-RJ7"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -207,10 +213,10 @@ Picture of the Day</string>
             </objects>
             <point key="canvasLocation" x="888.40579710144937" y="98.641304347826093"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="UWR-9y-x2K">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="wkB-9V-6U2" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="wkB-9V-6U2" customClass="APODDetailViewController" customModule="Astronomy_POD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bxb-BJ-39L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,6 +236,10 @@ Picture of the Day</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                             </preferredSymbolConfiguration>
                                         </state>
+                                        <connections>
+                                            <action selector="backButton:" destination="wkB-9V-6U2" eventType="touchUpInside" id="iQk-gD-vgJ"/>
+                                            <action selector="backButtonTapped:" destination="wkB-9V-6U2" eventType="touchUpInside" id="V8g-9S-R4j"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December 4, 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5I-Rt-FmU" userLabel="Date Label">
                                         <rect key="frame" x="112" y="11.666666666666668" width="150" height="22.000000000000004"/>
@@ -245,6 +255,9 @@ Picture of the Day</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                             </preferredSymbolConfiguration>
                                         </state>
+                                        <connections>
+                                            <action selector="shareButtonTapped:" destination="wkB-9V-6U2" eventType="touchUpInside" id="x7s-CZ-hp1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -283,7 +296,7 @@ Picture of the Day</string>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmn-Mf-NUP" userLabel="Body Label">
                                         <rect key="frame" x="16" y="69" width="382" height="378"/>
-                                        <mutableString key="text">Is this what will become of our Sun? Quite possibly. The first hint of our Sun's future was discovered inadvertently in 1764. At that time, Charles Messier was compiling a list of diffuse objects not to be confused with comets. The 27th object on Messier's list, now known as M27 or the Dumbbell Nebula, is a planetary nebula, the type of nebula our Sun will produce when nuclear fusion stops in its core. M27 is one of the brightest planetary nebulae on the sky, and can be seen toward the constellation of the Fox (Vulpecula) with binoculars. It takes light about 1000 years to reach us from M27, featured here in colors emitted by hydrogen and oxygen. Understanding the physics and significance of M27 was well beyond 18th century science. Even today, many things remain mysterious about bipolar planetary nebula like M27, including the physical mechanism that expels a low-mass star's gaseous outer-envelope, leaving an X-ray hot white dwarf.</mutableString>
+                                        <string key="text">Is this what will become of our Sun? Quite possibly. The first hint of our Sun's future was discovered inadvertently in 1764. At that time, Charles Messier was compiling a list of diffuse objects not to be confused with comets. The 27th object on Messier's list, now known as M27 or the Dumbbell Nebula, is a planetary nebula, the type of nebula our Sun will produce when nuclear fusion stops in its core. M27 is one of the brightest planetary nebulae on the sky, and can be seen toward the constellation of the Fox (Vulpecula) with binoculars. It takes light about 1000 years to reach us from M27, featured here in colors emitted by hydrogen and oxygen. Understanding the physics and significance of M27 was well beyond 18th century science. Even today, many things remain mysterious about bipolar planetary nebula like M27, including the physical mechanism that expels a low-mass star's gaseous outer-envelope, leaving an X-ray hot white dwarf.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -324,6 +337,12 @@ Picture of the Day</string>
                         <viewLayoutGuide key="safeArea" id="enN-oV-qh1"/>
                     </view>
                     <navigationItem key="navigationItem" id="RZb-Ql-daP"/>
+                    <connections>
+                        <outlet property="bodyLabel" destination="wmn-Mf-NUP" id="ZBU-Mg-azH"/>
+                        <outlet property="dateLabel" destination="S5I-Rt-FmU" id="Hql-6u-bRc"/>
+                        <outlet property="imageView" destination="Jsp-S2-eWn" id="9gd-S6-Eek"/>
+                        <outlet property="titleLabel" destination="SnZ-sh-GZY" id="tfI-tQ-sGf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yiz-Yt-4yi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

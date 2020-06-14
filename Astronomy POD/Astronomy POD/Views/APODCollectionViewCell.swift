@@ -10,4 +10,13 @@ import UIKit
 
 class APODCollectionViewCell: UICollectionViewCell {
     
+    // IBOutlets
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    
+    // Methods
+    override func prepareForReuse() {
+        imageView.image = UIImage(named: "planet")
+    }
+    
 }
