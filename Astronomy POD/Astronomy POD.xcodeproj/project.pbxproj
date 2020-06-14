@@ -19,6 +19,7 @@
 		63B7B7492496AC210011DBD8 /* APODDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7482496AC210011DBD8 /* APODDetailViewController.swift */; };
 		63B7B74D2496BBEC0011DBD8 /* APODFetchPictureOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B74C2496BBEC0011DBD8 /* APODFetchPictureOperation.m */; };
 		63B7B7542496BDE70011DBD8 /* NSURL+Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7532496BDE70011DBD8 /* NSURL+Secure.m */; };
+		63B7B7572496C1BA0011DBD8 /* APODCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7562496C1BA0011DBD8 /* APODCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		63B7B74C2496BBEC0011DBD8 /* APODFetchPictureOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APODFetchPictureOperation.m; sourceTree = "<group>"; };
 		63B7B7522496BDE70011DBD8 /* NSURL+Secure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+Secure.h"; sourceTree = "<group>"; };
 		63B7B7532496BDE70011DBD8 /* NSURL+Secure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Secure.m"; sourceTree = "<group>"; };
+		63B7B7552496C1BA0011DBD8 /* APODCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APODCache.h; sourceTree = "<group>"; };
+		63B7B7562496C1BA0011DBD8 /* APODCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APODCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 			children = (
 				63B7B7422496AB390011DBD8 /* APODPicture.h */,
 				63B7B7432496AB390011DBD8 /* APODPicture.m */,
+				63B7B7552496C1BA0011DBD8 /* APODCache.h */,
+				63B7B7562496C1BA0011DBD8 /* APODCache.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B7B7572496C1BA0011DBD8 /* APODCache.m in Sources */,
 				63B7B7492496AC210011DBD8 /* APODDetailViewController.swift in Sources */,
 				63B7B74D2496BBEC0011DBD8 /* APODFetchPictureOperation.m in Sources */,
 				638B7BCA24942CA000A3F7CB /* AppDelegate.m in Sources */,
