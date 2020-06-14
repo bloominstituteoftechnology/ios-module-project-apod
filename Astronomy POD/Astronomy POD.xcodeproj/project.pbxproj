@@ -16,6 +16,7 @@
 		63B7B7412496AAA30011DBD8 /* DTWAstronomyPODClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */; };
 		63B7B7442496AB390011DBD8 /* DTWAstronomyPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7432496AB390011DBD8 /* DTWAstronomyPOD.m */; };
 		63B7B7472496ABD00011DBD8 /* PODCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7462496ABD00011DBD8 /* PODCollectionViewController.swift */; };
+		63B7B7492496AC210011DBD8 /* PODDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7482496AC210011DBD8 /* PODDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		63B7B7432496AB390011DBD8 /* DTWAstronomyPOD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWAstronomyPOD.m; sourceTree = "<group>"; };
 		63B7B7452496ABCF0011DBD8 /* Astronomy POD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy POD-Bridging-Header.h"; sourceTree = "<group>"; };
 		63B7B7462496ABD00011DBD8 /* PODCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODCollectionViewController.swift; sourceTree = "<group>"; };
+		63B7B7482496AC210011DBD8 /* PODDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				63B7B7462496ABD00011DBD8 /* PODCollectionViewController.swift */,
+				63B7B7482496AC210011DBD8 /* PODDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B7B7492496AC210011DBD8 /* PODDetailViewController.swift in Sources */,
 				638B7BCA24942CA000A3F7CB /* AppDelegate.m in Sources */,
 				63B7B7442496AB390011DBD8 /* DTWAstronomyPOD.m in Sources */,
 				638B7BDB24942CA300A3F7CB /* main.m in Sources */,
