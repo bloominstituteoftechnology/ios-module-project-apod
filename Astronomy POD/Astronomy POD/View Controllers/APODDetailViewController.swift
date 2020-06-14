@@ -9,6 +9,10 @@
 import UIKit
 
 class APODDetailViewController: UIViewController {
+    
+    // Properties
+    var pictureReference: APODPicture?
+    var image: UIImage?
 
     // IBOutlets
     @IBOutlet var imageView: UIImageView!
@@ -20,16 +24,44 @@ class APODDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
 
     // IBActions
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func shareButtonTapped(_ sender: UIButton) {
         
+    }
+    
+    // Private Methods
+    
+    private func updateViews() {
+        if let pictureReference = pictureReference {
+            
+            if let date = date(from: pictureReference.dateString) {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateStyle = .long
+                dateLabel.text = dateFormatter.string(from: date)
+            }
+            
+            titleLabel.text = pictureReference.title
+            bodyLabel.text = pictureReference.explanation
+        }
+        
+        if let image = image {
+            imageView.image = image
+        }
+    }
+    
+    private func date(from dateString: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: dateString)
+        
+        return date
     }
 }
