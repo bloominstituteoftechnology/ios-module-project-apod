@@ -116,6 +116,9 @@ Picture of the Day</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                             </preferredSymbolConfiguration>
                                         </state>
+                                        <connections>
+                                            <action selector="previousMonthButtonTapped:" destination="YVb-iY-fhy" eventType="touchUpInside" id="XSO-Xs-7fe"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8S-dT-g53" userLabel="Month Label">
                                         <rect key="frame" x="34" y="0.0" width="173.66666666666666" height="43"/>
@@ -131,6 +134,9 @@ Picture of the Day</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                             </preferredSymbolConfiguration>
                                         </state>
+                                        <connections>
+                                            <action selector="nextMonthButtonTapped:" destination="YVb-iY-fhy" eventType="touchUpInside" id="bkI-7I-FAu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -186,7 +192,7 @@ Picture of the Day</string>
                                         <connections>
                                             <outlet property="dateLabel" destination="liC-I5-f8P" id="s9J-z8-cdn"/>
                                             <outlet property="imageView" destination="7wN-tn-o1t" id="crL-4l-GKc"/>
-                                            <segue destination="wkB-9V-6U2" kind="show" id="Bc6-n9-IpF"/>
+                                            <segue destination="wkB-9V-6U2" kind="show" identifier="ShowDetail" id="Bc6-n9-IpF"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -208,6 +214,10 @@ Picture of the Day</string>
                         <viewLayoutGuide key="safeArea" id="cRZ-bD-v1i"/>
                     </view>
                     <navigationItem key="navigationItem" id="3sm-Xw-Gya"/>
+                    <connections>
+                        <outlet property="collectionView" destination="b1u-ZZ-e74" id="VHu-eU-vtW"/>
+                        <outlet property="monthLabel" destination="A8S-dT-g53" id="8Ea-ep-kyn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNk-jN-xUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,7 +247,6 @@ Picture of the Day</string>
                                             </preferredSymbolConfiguration>
                                         </state>
                                         <connections>
-                                            <action selector="backButton:" destination="wkB-9V-6U2" eventType="touchUpInside" id="iQk-gD-vgJ"/>
                                             <action selector="backButtonTapped:" destination="wkB-9V-6U2" eventType="touchUpInside" id="V8g-9S-R4j"/>
                                         </connections>
                                     </button>
