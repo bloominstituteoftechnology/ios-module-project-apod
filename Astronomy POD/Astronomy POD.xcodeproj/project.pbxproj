@@ -15,6 +15,7 @@
 		638B7BDB24942CA300A3F7CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B7BDA24942CA300A3F7CB /* main.m */; };
 		63B7B7412496AAA30011DBD8 /* DTWAstronomyPODClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */; };
 		63B7B7442496AB390011DBD8 /* DTWAstronomyPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7432496AB390011DBD8 /* DTWAstronomyPOD.m */; };
+		63B7B7472496ABD00011DBD8 /* PODCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7462496ABD00011DBD8 /* PODCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWAstronomyPODClient.m; sourceTree = "<group>"; };
 		63B7B7422496AB390011DBD8 /* DTWAstronomyPOD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWAstronomyPOD.h; sourceTree = "<group>"; };
 		63B7B7432496AB390011DBD8 /* DTWAstronomyPOD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWAstronomyPOD.m; sourceTree = "<group>"; };
+		63B7B7452496ABCF0011DBD8 /* Astronomy POD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy POD-Bridging-Header.h"; sourceTree = "<group>"; };
+		63B7B7462496ABD00011DBD8 /* PODCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,7 @@
 				638B7BD424942CA300A3F7CB /* Assets.xcassets */,
 				638B7BD924942CA300A3F7CB /* Info.plist */,
 				638B7BDA24942CA300A3F7CB /* main.m */,
+				63B7B7452496ABCF0011DBD8 /* Astronomy POD-Bridging-Header.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -108,6 +112,7 @@
 		638B7BE424942DE700A3F7CB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				63B7B7462496ABD00011DBD8 /* PODCollectionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				TargetAttributes = {
 					638B7BC424942CA000A3F7CB = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -195,6 +201,7 @@
 				63B7B7442496AB390011DBD8 /* DTWAstronomyPOD.m in Sources */,
 				638B7BDB24942CA300A3F7CB /* main.m in Sources */,
 				638B7BCD24942CA000A3F7CB /* SceneDelegate.m in Sources */,
+				63B7B7472496ABD00011DBD8 /* PODCollectionViewController.swift in Sources */,
 				63B7B7412496AAA30011DBD8 /* DTWAstronomyPODClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3BQB6FYF6S;
 				INFOPLIST_FILE = "Astronomy POD/Resources/Info.plist";
@@ -344,6 +352,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambda.davidwright.Astronomy-POD";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy POD/View Controllers/Astronomy POD-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -352,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3BQB6FYF6S;
 				INFOPLIST_FILE = "Astronomy POD/Resources/Info.plist";
@@ -361,6 +373,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambda.davidwright.Astronomy-POD";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy POD/View Controllers/Astronomy POD-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
