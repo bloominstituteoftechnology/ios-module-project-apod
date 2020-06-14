@@ -14,6 +14,7 @@
 		638B7BD824942CA300A3F7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD624942CA300A3F7CB /* LaunchScreen.storyboard */; };
 		638B7BDB24942CA300A3F7CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B7BDA24942CA300A3F7CB /* main.m */; };
 		63B7B7412496AAA30011DBD8 /* DTWAstronomyPODClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */; };
+		63B7B7442496AB390011DBD8 /* DTWAstronomyPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7432496AB390011DBD8 /* DTWAstronomyPOD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		638B7BDA24942CA300A3F7CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63B7B73F2496AAA20011DBD8 /* DTWAstronomyPODClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWAstronomyPODClient.h; sourceTree = "<group>"; };
 		63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWAstronomyPODClient.m; sourceTree = "<group>"; };
+		63B7B7422496AB390011DBD8 /* DTWAstronomyPOD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWAstronomyPOD.h; sourceTree = "<group>"; };
+		63B7B7432496AB390011DBD8 /* DTWAstronomyPOD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWAstronomyPOD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 		638B7BE324942DD400A3F7CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63B7B7422496AB390011DBD8 /* DTWAstronomyPOD.h */,
+				63B7B7432496AB390011DBD8 /* DTWAstronomyPOD.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				638B7BCA24942CA000A3F7CB /* AppDelegate.m in Sources */,
+				63B7B7442496AB390011DBD8 /* DTWAstronomyPOD.m in Sources */,
 				638B7BDB24942CA300A3F7CB /* main.m in Sources */,
 				638B7BCD24942CA000A3F7CB /* SceneDelegate.m in Sources */,
 				63B7B7412496AAA30011DBD8 /* DTWAstronomyPODClient.m in Sources */,
