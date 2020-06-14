@@ -1,5 +1,5 @@
 //
-//  DTWAstronomyPOD.h
+//  APODClient.h
 //  Astronomy POD
 //
 //  Created by David Wright on 6/14/20.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DTWAstronomyPOD : NSObject
+@interface APODClient : NSObject
 
 @end
 

@@ -1,13 +1,13 @@
 //
-//  DTWAstronomyPODClient.m
+//  APODClient.m
 //  Astronomy POD
 //
 //  Created by David Wright on 6/14/20.
 //  Copyright © 2020 David Wright. All rights reserved.
 //
 
-#import "DTWAstronomyPODClient.h"
+#import "APODClient.h"
 
-@implementation DTWAstronomyPODClient
+@implementation APODClient
 
 @end

@@ -13,10 +13,10 @@
 		638B7BD524942CA300A3F7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD424942CA300A3F7CB /* Assets.xcassets */; };
 		638B7BD824942CA300A3F7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD624942CA300A3F7CB /* LaunchScreen.storyboard */; };
 		638B7BDB24942CA300A3F7CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B7BDA24942CA300A3F7CB /* main.m */; };
-		63B7B7412496AAA30011DBD8 /* DTWAstronomyPODClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */; };
-		63B7B7442496AB390011DBD8 /* DTWAstronomyPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7432496AB390011DBD8 /* DTWAstronomyPOD.m */; };
-		63B7B7472496ABD00011DBD8 /* PODCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7462496ABD00011DBD8 /* PODCollectionViewController.swift */; };
-		63B7B7492496AC210011DBD8 /* PODDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7482496AC210011DBD8 /* PODDetailViewController.swift */; };
+		63B7B7412496AAA30011DBD8 /* APODClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7402496AAA30011DBD8 /* APODClient.m */; };
+		63B7B7442496AB390011DBD8 /* APODPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7432496AB390011DBD8 /* APODPicture.m */; };
+		63B7B7472496ABD00011DBD8 /* APODCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7462496ABD00011DBD8 /* APODCollectionViewController.swift */; };
+		63B7B7492496AC210011DBD8 /* APODDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7482496AC210011DBD8 /* APODDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,13 +30,13 @@
 		638B7BD724942CA300A3F7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		638B7BD924942CA300A3F7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		638B7BDA24942CA300A3F7CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		63B7B73F2496AAA20011DBD8 /* DTWAstronomyPODClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWAstronomyPODClient.h; sourceTree = "<group>"; };
-		63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWAstronomyPODClient.m; sourceTree = "<group>"; };
-		63B7B7422496AB390011DBD8 /* DTWAstronomyPOD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWAstronomyPOD.h; sourceTree = "<group>"; };
-		63B7B7432496AB390011DBD8 /* DTWAstronomyPOD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWAstronomyPOD.m; sourceTree = "<group>"; };
+		63B7B73F2496AAA20011DBD8 /* APODClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APODClient.h; sourceTree = "<group>"; };
+		63B7B7402496AAA30011DBD8 /* APODClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APODClient.m; sourceTree = "<group>"; };
+		63B7B7422496AB390011DBD8 /* APODPicture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APODPicture.h; sourceTree = "<group>"; };
+		63B7B7432496AB390011DBD8 /* APODPicture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APODPicture.m; sourceTree = "<group>"; };
 		63B7B7452496ABCF0011DBD8 /* Astronomy POD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy POD-Bridging-Header.h"; sourceTree = "<group>"; };
-		63B7B7462496ABD00011DBD8 /* PODCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODCollectionViewController.swift; sourceTree = "<group>"; };
-		63B7B7482496AC210011DBD8 /* PODDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODDetailViewController.swift; sourceTree = "<group>"; };
+		63B7B7462496ABD00011DBD8 /* APODCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODCollectionViewController.swift; sourceTree = "<group>"; };
+		63B7B7482496AC210011DBD8 /* APODDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,8 @@
 		638B7BE324942DD400A3F7CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				63B7B7422496AB390011DBD8 /* DTWAstronomyPOD.h */,
-				63B7B7432496AB390011DBD8 /* DTWAstronomyPOD.m */,
+				63B7B7422496AB390011DBD8 /* APODPicture.h */,
+				63B7B7432496AB390011DBD8 /* APODPicture.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,8 +114,8 @@
 		638B7BE424942DE700A3F7CB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				63B7B7462496ABD00011DBD8 /* PODCollectionViewController.swift */,
-				63B7B7482496AC210011DBD8 /* PODDetailViewController.swift */,
+				63B7B7462496ABD00011DBD8 /* APODCollectionViewController.swift */,
+				63B7B7482496AC210011DBD8 /* APODDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -123,8 +123,8 @@
 		63B7B73E2496AA4E0011DBD8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				63B7B73F2496AAA20011DBD8 /* DTWAstronomyPODClient.h */,
-				63B7B7402496AAA30011DBD8 /* DTWAstronomyPODClient.m */,
+				63B7B73F2496AAA20011DBD8 /* APODClient.h */,
+				63B7B7402496AAA30011DBD8 /* APODClient.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -200,13 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63B7B7492496AC210011DBD8 /* PODDetailViewController.swift in Sources */,
+				63B7B7492496AC210011DBD8 /* APODDetailViewController.swift in Sources */,
 				638B7BCA24942CA000A3F7CB /* AppDelegate.m in Sources */,
-				63B7B7442496AB390011DBD8 /* DTWAstronomyPOD.m in Sources */,
+				63B7B7442496AB390011DBD8 /* APODPicture.m in Sources */,
 				638B7BDB24942CA300A3F7CB /* main.m in Sources */,
 				638B7BCD24942CA000A3F7CB /* SceneDelegate.m in Sources */,
-				63B7B7472496ABD00011DBD8 /* PODCollectionViewController.swift in Sources */,
-				63B7B7412496AAA30011DBD8 /* DTWAstronomyPODClient.m in Sources */,
+				63B7B7472496ABD00011DBD8 /* APODCollectionViewController.swift in Sources */,
+				63B7B7412496AAA30011DBD8 /* APODClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

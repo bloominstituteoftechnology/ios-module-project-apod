@@ -1,5 +1,5 @@
 //
-//  PODDetailViewController.swift
+//  APODCollectionViewController.swift
 //  Astronomy POD
 //
 //  Created by David Wright on 6/14/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PODDetailViewController: UIViewController {
+class APODCollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
