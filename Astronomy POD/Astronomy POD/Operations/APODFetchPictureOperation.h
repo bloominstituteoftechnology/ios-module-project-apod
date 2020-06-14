@@ -6,12 +6,16 @@
 //  Copyright © 2020 David Wright. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import <UIKit/UIKit.h>
 
 @interface APODFetchPictureOperation : NSOperation
 
-@end
+@property (nonatomic, nullable) NSURL *pictureURL;
+@property (nonatomic, nullable) UIImage *image;
 
-NS_ASSUME_NONNULL_END
+- (nonnull instancetype)initWithPictureURL:(nonnull NSURL *)pictureURL;
+
+- (void)start;
+- (void)cancel;
+
+@end
