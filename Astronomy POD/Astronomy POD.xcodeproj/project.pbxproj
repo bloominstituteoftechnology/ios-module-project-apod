@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		638B7BCA24942CA000A3F7CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B7BC924942CA000A3F7CB /* AppDelegate.m */; };
+		638B7BCD24942CA000A3F7CB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B7BCC24942CA000A3F7CB /* SceneDelegate.m */; };
+		638B7BD324942CA000A3F7CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD124942CA000A3F7CB /* Main.storyboard */; };
+		638B7BD524942CA300A3F7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD424942CA300A3F7CB /* Assets.xcassets */; };
+		638B7BD824942CA300A3F7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638B7BD624942CA300A3F7CB /* LaunchScreen.storyboard */; };
+		638B7BDB24942CA300A3F7CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B7BDA24942CA300A3F7CB /* main.m */; };
+		63B7B7412496AAA30011DBD8 /* APODClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7402496AAA30011DBD8 /* APODClient.m */; };
+		63B7B7442496AB390011DBD8 /* APODPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7432496AB390011DBD8 /* APODPicture.m */; };
+		63B7B7472496ABD00011DBD8 /* APODCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7462496ABD00011DBD8 /* APODCollectionViewController.swift */; };
+		63B7B7492496AC210011DBD8 /* APODDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7482496AC210011DBD8 /* APODDetailViewController.swift */; };
+		63B7B74D2496BBEC0011DBD8 /* APODFetchPictureOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B74C2496BBEC0011DBD8 /* APODFetchPictureOperation.m */; };
+		63B7B7542496BDE70011DBD8 /* NSURL+Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7532496BDE70011DBD8 /* NSURL+Secure.m */; };
+		63B7B7572496C1BA0011DBD8 /* APODCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B7562496C1BA0011DBD8 /* APODCache.m */; };
+		63B7B75C2496C39F0011DBD8 /* APODCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B7B75B2496C39F0011DBD8 /* APODCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		638B7BC524942CA000A3F7CB /* Astronomy POD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astronomy POD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		638B7BC824942CA000A3F7CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		638B7BC924942CA000A3F7CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		638B7BCB24942CA000A3F7CB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		638B7BCC24942CA000A3F7CB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		638B7BD224942CA000A3F7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		638B7BD424942CA300A3F7CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		638B7BD724942CA300A3F7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		638B7BD924942CA300A3F7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		638B7BDA24942CA300A3F7CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63B7B73F2496AAA20011DBD8 /* APODClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APODClient.h; sourceTree = "<group>"; };
+		63B7B7402496AAA30011DBD8 /* APODClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APODClient.m; sourceTree = "<group>"; };
+		63B7B7422496AB390011DBD8 /* APODPicture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APODPicture.h; sourceTree = "<group>"; };
+		63B7B7432496AB390011DBD8 /* APODPicture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APODPicture.m; sourceTree = "<group>"; };
+		63B7B7452496ABCF0011DBD8 /* Astronomy POD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy POD-Bridging-Header.h"; sourceTree = "<group>"; };
+		63B7B7462496ABD00011DBD8 /* APODCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODCollectionViewController.swift; sourceTree = "<group>"; };
+		63B7B7482496AC210011DBD8 /* APODDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODDetailViewController.swift; sourceTree = "<group>"; };
+		63B7B74B2496BBEC0011DBD8 /* APODFetchPictureOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APODFetchPictureOperation.h; sourceTree = "<group>"; };
+		63B7B74C2496BBEC0011DBD8 /* APODFetchPictureOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APODFetchPictureOperation.m; sourceTree = "<group>"; };
+		63B7B7522496BDE70011DBD8 /* NSURL+Secure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+Secure.h"; sourceTree = "<group>"; };
+		63B7B7532496BDE70011DBD8 /* NSURL+Secure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Secure.m"; sourceTree = "<group>"; };
+		63B7B7552496C1BA0011DBD8 /* APODCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APODCache.h; sourceTree = "<group>"; };
+		63B7B7562496C1BA0011DBD8 /* APODCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APODCache.m; sourceTree = "<group>"; };
+		63B7B75B2496C39F0011DBD8 /* APODCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		638B7BC224942CA000A3F7CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		638B7BBC24942CA000A3F7CB = {
+			isa = PBXGroup;
+			children = (
+				638B7BC724942CA000A3F7CB /* Astronomy POD */,
+				638B7BC624942CA000A3F7CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		638B7BC624942CA000A3F7CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				638B7BC524942CA000A3F7CB /* Astronomy POD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		638B7BC724942CA000A3F7CB /* Astronomy POD */ = {
+			isa = PBXGroup;
+			children = (
+				638B7BE324942DD400A3F7CB /* Model */,
+				638B7BE424942DE700A3F7CB /* View Controllers */,
+				63B7B7582496C34D0011DBD8 /* Views */,
+				63B7B73E2496AA4E0011DBD8 /* Networking */,
+				63B7B74A2496BB9D0011DBD8 /* Operations */,
+				63B7B74E2496BD590011DBD8 /* Utililties */,
+				638B7BE124942CE400A3F7CB /* Storyboards */,
+				638B7BE224942CF700A3F7CB /* Resources */,
+			);
+			path = "Astronomy POD";
+			sourceTree = "<group>";
+		};
+		638B7BE124942CE400A3F7CB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				638B7BD124942CA000A3F7CB /* Main.storyboard */,
+				638B7BD624942CA300A3F7CB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		638B7BE224942CF700A3F7CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				638B7BC824942CA000A3F7CB /* AppDelegate.h */,
+				638B7BC924942CA000A3F7CB /* AppDelegate.m */,
+				638B7BCB24942CA000A3F7CB /* SceneDelegate.h */,
+				638B7BCC24942CA000A3F7CB /* SceneDelegate.m */,
+				638B7BD424942CA300A3F7CB /* Assets.xcassets */,
+				638B7BD924942CA300A3F7CB /* Info.plist */,
+				638B7BDA24942CA300A3F7CB /* main.m */,
+				63B7B7452496ABCF0011DBD8 /* Astronomy POD-Bridging-Header.h */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		638B7BE324942DD400A3F7CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63B7B7422496AB390011DBD8 /* APODPicture.h */,
+				63B7B7432496AB390011DBD8 /* APODPicture.m */,
+				63B7B7552496C1BA0011DBD8 /* APODCache.h */,
+				63B7B7562496C1BA0011DBD8 /* APODCache.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		638B7BE424942DE700A3F7CB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				63B7B7462496ABD00011DBD8 /* APODCollectionViewController.swift */,
+				63B7B7482496AC210011DBD8 /* APODDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		63B7B73E2496AA4E0011DBD8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				63B7B73F2496AAA20011DBD8 /* APODClient.h */,
+				63B7B7402496AAA30011DBD8 /* APODClient.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		63B7B74A2496BB9D0011DBD8 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				63B7B74B2496BBEC0011DBD8 /* APODFetchPictureOperation.h */,
+				63B7B74C2496BBEC0011DBD8 /* APODFetchPictureOperation.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		63B7B74E2496BD590011DBD8 /* Utililties */ = {
+			isa = PBXGroup;
+			children = (
+				63B7B7522496BDE70011DBD8 /* NSURL+Secure.h */,
+				63B7B7532496BDE70011DBD8 /* NSURL+Secure.m */,
+			);
+			path = Utililties;
+			sourceTree = "<group>";
+		};
+		63B7B7582496C34D0011DBD8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63B7B75B2496C39F0011DBD8 /* APODCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		638B7BC424942CA000A3F7CB /* Astronomy POD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 638B7BDE24942CA300A3F7CB /* Build configuration list for PBXNativeTarget "Astronomy POD" */;
+			buildPhases = (
+				638B7BC124942CA000A3F7CB /* Sources */,
+				638B7BC224942CA000A3F7CB /* Frameworks */,
+				638B7BC324942CA000A3F7CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Astronomy POD";
+			productName = "Astronomy POD";
+			productReference = 638B7BC524942CA000A3F7CB /* Astronomy POD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		638B7BBD24942CA000A3F7CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "David Wright";
+				TargetAttributes = {
+					638B7BC424942CA000A3F7CB = {
+						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
+					};
+				};
+			};
+			buildConfigurationList = 638B7BC024942CA000A3F7CB /* Build configuration list for PBXProject "Astronomy POD" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 638B7BBC24942CA000A3F7CB;
+			productRefGroup = 638B7BC624942CA000A3F7CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				638B7BC424942CA000A3F7CB /* Astronomy POD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		638B7BC324942CA000A3F7CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				638B7BD824942CA300A3F7CB /* LaunchScreen.storyboard in Resources */,
+				638B7BD524942CA300A3F7CB /* Assets.xcassets in Resources */,
+				638B7BD324942CA000A3F7CB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		638B7BC124942CA000A3F7CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B7B7572496C1BA0011DBD8 /* APODCache.m in Sources */,
+				63B7B7492496AC210011DBD8 /* APODDetailViewController.swift in Sources */,
+				63B7B74D2496BBEC0011DBD8 /* APODFetchPictureOperation.m in Sources */,
+				638B7BCA24942CA000A3F7CB /* AppDelegate.m in Sources */,
+				63B7B7442496AB390011DBD8 /* APODPicture.m in Sources */,
+				63B7B75C2496C39F0011DBD8 /* APODCollectionViewCell.swift in Sources */,
+				63B7B7542496BDE70011DBD8 /* NSURL+Secure.m in Sources */,
+				638B7BDB24942CA300A3F7CB /* main.m in Sources */,
+				638B7BCD24942CA000A3F7CB /* SceneDelegate.m in Sources */,
+				63B7B7472496ABD00011DBD8 /* APODCollectionViewController.swift in Sources */,
+				63B7B7412496AAA30011DBD8 /* APODClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		638B7BD124942CA000A3F7CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				638B7BD224942CA000A3F7CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		638B7BD624942CA300A3F7CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				638B7BD724942CA300A3F7CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		638B7BDC24942CA300A3F7CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		638B7BDD24942CA300A3F7CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		638B7BDF24942CA300A3F7CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BQB6FYF6S;
+				INFOPLIST_FILE = "Astronomy POD/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambda.davidwright.Astronomy-POD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy POD/Resources/Astronomy POD-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		638B7BE024942CA300A3F7CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BQB6FYF6S;
+				INFOPLIST_FILE = "Astronomy POD/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambda.davidwright.Astronomy-POD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy POD/Resources/Astronomy POD-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		638B7BC024942CA000A3F7CB /* Build configuration list for PBXProject "Astronomy POD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				638B7BDC24942CA300A3F7CB /* Debug */,
+				638B7BDD24942CA300A3F7CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		638B7BDE24942CA300A3F7CB /* Build configuration list for PBXNativeTarget "Astronomy POD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				638B7BDF24942CA300A3F7CB /* Debug */,
+				638B7BE024942CA300A3F7CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 638B7BBD24942CA000A3F7CB /* Project object */;
+}
