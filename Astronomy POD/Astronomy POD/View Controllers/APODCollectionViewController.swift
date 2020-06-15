@@ -46,7 +46,9 @@ class APODCollectionViewController: UIViewController {
                         self.pictureReferences.append(pictureReference)
                     }
                     
-                    guard let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: date) else { continue }
+                    guard let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: date),
+                    nextDate <= currentDate else { return }
+                    
                     date = nextDate
                 }
                 
@@ -58,6 +60,7 @@ class APODCollectionViewController: UIViewController {
     
     private var pictureReferences = [APODPicture]() {
         didSet {
+            pictureReferences.sort { $0.date < $1.date }
             collectionView?.reloadData()
         }
     }
@@ -73,6 +76,7 @@ class APODCollectionViewController: UIViewController {
         super.viewDidLoad()
         
         updateTitleView()
+        displayDate = currentDate
 
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action:  #selector(refresh), for: .valueChanged)
@@ -120,8 +124,9 @@ class APODCollectionViewController: UIViewController {
     
     private func loadImage(forCell cell: APODCollectionViewCell, forItemAt indexPath: IndexPath) {
         let pictureReference = pictureReferences[indexPath.item]
+        let dateString = string(from: pictureReference.date)
         
-        if let image = cache.value(forKey: pictureReference.dateString) {
+        if let image = cache.value(forKey: dateString) {
             cell.imageView.image = image;
             return
         }
@@ -132,12 +137,12 @@ class APODCollectionViewController: UIViewController {
         
         let cacheOp = BlockOperation {
             if let image = fetchOp.image {
-                self.cache.cacheValue(image, forKey: pictureReference.dateString)
+                self.cache.cacheValue(image, forKey: dateString)
             }
         }
         
         let completionOp = BlockOperation {
-            defer { self.operations.removeValue(forKey: pictureReference.dateString) }
+            defer { self.operations.removeValue(forKey: dateString) }
             
             if let currentIndexPath = self.collectionView.indexPath(for: cell),
                 currentIndexPath != indexPath {
@@ -156,15 +161,15 @@ class APODCollectionViewController: UIViewController {
         fetchPictureQueue.addOperation(cacheOp)
         OperationQueue.main.addOperation(completionOp)
         
-        operations[pictureReference.dateString] = fetchOp
+        operations[dateString] = fetchOp
     }
     
-    private func date(from dateString: String) -> Date? {
+    private func string(from date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.date(from: dateString)
+        let dateString = dateFormatter.string(from: date)
         
-        return date
+        return dateString
     }
 }
 
@@ -179,8 +184,7 @@ extension APODCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! APODCollectionViewCell
         
-        let dateString = pictureReferences[indexPath.item].dateString
-        let pictureDate = date(from: dateString)!
+        let pictureDate = pictureReferences[indexPath.item].date
         let calendar = Calendar.current
         let dayComponent = calendar.dateComponents([.day], from: pictureDate)
         let day = dayComponent.day!
@@ -201,7 +205,8 @@ extension APODCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if pictureReferences.count > 0 {
             let pictureRef = pictureReferences[indexPath.item]
-            operations[pictureRef.dateString]?.cancel()
+            let dateString = string(from: pictureRef.date)
+            operations[dateString]?.cancel()
         } else {
             for (_, operation) in operations {
                 operation.cancel()

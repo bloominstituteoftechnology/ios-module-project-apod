@@ -10,10 +10,10 @@
 
 @implementation APODPicture
 
-- (instancetype)initWithDateString:(NSString *)dateString urlString:(NSString *)urlString title:(NSString *)title explanation:(NSString *)explanation mediaType:(NSString *)mediaType
+- (instancetype)initWithDate:(NSDate *)date urlString:(NSString *)urlString title:(NSString *)title explanation:(NSString *)explanation mediaType:(NSString *)mediaType
 {
     if (self = [super init]) {
-        _dateString = dateString.copy;
+        _date = date;
         _urlString = urlString.copy;
         _title = title.copy;
         _explanation = explanation.copy;
@@ -36,13 +36,15 @@
     NSString *dateString = [dictionary objectForKey:@"date"];
     if (![mediaType isKindOfClass:[NSString class]]) return nil;
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd";
+    NSDate *date = [dateFormatter dateFromString:dateString];
+    if (!date) return nil;
+    
     NSString *urlString = [dictionary objectForKey:@"url"];
     if (![urlString isKindOfClass:[NSString class]]) return nil;
     
-    NSArray *solDescriptionDictionaries = [dictionary objectForKey:@"photos"];
-    if (![solDescriptionDictionaries isKindOfClass:[NSArray class]]) return nil;
-    
-    return [self initWithDateString:dateString urlString:urlString title:title explanation:explanation mediaType:mediaType];
+    return [self initWithDate:date urlString:urlString title:title explanation:explanation mediaType:mediaType];
 }
 
 @end

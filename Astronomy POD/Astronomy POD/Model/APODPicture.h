@@ -10,17 +10,17 @@
 
 @interface APODPicture : NSObject
 
-@property (nonatomic, copy, readonly, nonnull) NSString *dateString;
+@property (nonatomic, readonly, nonnull) NSDate *date;
 @property (nonatomic, copy, readonly, nonnull) NSString *urlString;
 @property (nonatomic, copy, readonly, nonnull) NSString *title;
-@property (nonatomic, copy, readonly, nonnull) NSString *explanation;   // "YYYY-MM-DD"
-@property (nonatomic, copy, readonly, nonnull) NSString *mediaType;     // key: "media_type"
+@property (nonatomic, copy, readonly, nonnull) NSString *explanation;
+@property (nonatomic, copy, readonly, nonnull) NSString *mediaType;
 
-- (nonnull instancetype)initWithDateString:(nonnull NSString *)dateString
-                                 urlString:(nonnull NSString *)urlString
-                                     title:(nonnull NSString *)title
-                               explanation:(nonnull NSString *)explanation
-                                 mediaType:(nonnull NSString *)mediaType;
+- (nonnull instancetype)initWithDate:(nonnull NSDate *)date
+                           urlString:(nonnull NSString *)urlString
+                               title:(nonnull NSString *)title
+                         explanation:(nonnull NSString *)explanation
+                           mediaType:(nonnull NSString *)mediaType;
 
 - (nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dictionary;
 

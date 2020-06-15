@@ -61,8 +61,6 @@
         }
         
         if (!data) {
-//            NSError *error = errorWithMessage(@"Error receiving photo data: %@", LSIDataNilError);
-//            NSLog(@"%@", error);
             NSLog(@"Error receiving photo data");
             return;
         }
@@ -70,8 +68,6 @@
         UIImage *image = [UIImage imageWithData:data];
         
         if (!image) {
-//            NSError *error = errorWithMessage(@"Error converting fetched data into image: %@", LSIDataCorruptError);
-//            NSLog(@"%@", error);
             NSLog(@"Error converting fetched data into image");
             return;
         }

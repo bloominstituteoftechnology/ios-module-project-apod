@@ -42,11 +42,9 @@ class APODDetailViewController: UIViewController {
     private func updateViews() {
         if let pictureReference = pictureReference {
             
-            if let date = date(from: pictureReference.dateString) {
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateStyle = .long
-                dateLabel.text = dateFormatter.string(from: date)
-            }
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .long
+            dateLabel.text = dateFormatter.string(from: pictureReference.date)
             
             titleLabel.text = pictureReference.title
             bodyLabel.text = pictureReference.explanation
@@ -55,13 +53,5 @@ class APODDetailViewController: UIViewController {
         if let image = image {
             imageView.image = image
         }
-    }
-    
-    private func date(from dateString: String) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.date(from: dateString)
-        
-        return date
     }
 }
