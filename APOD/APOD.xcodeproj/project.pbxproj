@@ -14,6 +14,8 @@
 		27852F9E249BF5EB00195B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27852F9D249BF5EB00195B1E /* Assets.xcassets */; };
 		27852FA1249BF5EB00195B1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27852F9F249BF5EB00195B1E /* LaunchScreen.storyboard */; };
 		27852FAD249BF6A700195B1E /* CMDPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 27852FAC249BF6A700195B1E /* CMDPhoto.m */; };
+		27852FB1249BF9C100195B1E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27852FB0249BF9C100195B1E /* NetworkError.swift */; };
+		27852FB3249BF9FE00195B1E /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27852FB2249BF9FE00195B1E /* PhotoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		27852FAA249BF6A600195B1E /* APOD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APOD-Bridging-Header.h"; sourceTree = "<group>"; };
 		27852FAB249BF6A700195B1E /* CMDPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDPhoto.h; sourceTree = "<group>"; };
 		27852FAC249BF6A700195B1E /* CMDPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDPhoto.m; sourceTree = "<group>"; };
+		27852FB0249BF9C100195B1E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		27852FB2249BF9FE00195B1E /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				27852FA9249BF68B00195B1E /* Model */,
+				27852FAE249BF94100195B1E /* Model Controller */,
 				27852FA8249BF62800195B1E /* Resources */,
+				27852FAF249BF98100195B1E /* Helpers */,
 				27852F98249BF5E700195B1E /* ViewController.swift */,
 				27852F9A249BF5E700195B1E /* Main.storyboard */,
-				27852FAA249BF6A600195B1E /* APOD-Bridging-Header.h */,
 			);
 			path = APOD;
 			sourceTree = "<group>";
@@ -88,6 +93,23 @@
 				27852FAC249BF6A700195B1E /* CMDPhoto.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		27852FAE249BF94100195B1E /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27852FB2249BF9FE00195B1E /* PhotoController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		27852FAF249BF98100195B1E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				27852FAA249BF6A600195B1E /* APOD-Bridging-Header.h */,
+				27852FB0249BF9C100195B1E /* NetworkError.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,10 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27852FB3249BF9FE00195B1E /* PhotoController.swift in Sources */,
 				27852F99249BF5E700195B1E /* ViewController.swift in Sources */,
 				27852F95249BF5E700195B1E /* AppDelegate.swift in Sources */,
 				27852F97249BF5E700195B1E /* SceneDelegate.swift in Sources */,
 				27852FAD249BF6A700195B1E /* CMDPhoto.m in Sources */,
+				27852FB1249BF9C100195B1E /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +342,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chrisdobek.APOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "APOD/APOD-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "APOD/Helpers/APOD-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,7 +362,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chrisdobek.APOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "APOD/APOD-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "APOD/Helpers/APOD-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
