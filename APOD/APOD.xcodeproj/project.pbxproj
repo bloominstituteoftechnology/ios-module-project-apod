@@ -13,6 +13,7 @@
 		27852F9C249BF5E700195B1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27852F9A249BF5E700195B1E /* Main.storyboard */; };
 		27852F9E249BF5EB00195B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27852F9D249BF5EB00195B1E /* Assets.xcassets */; };
 		27852FA1249BF5EB00195B1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27852F9F249BF5EB00195B1E /* LaunchScreen.storyboard */; };
+		27852FAD249BF6A700195B1E /* CMDPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 27852FAC249BF6A700195B1E /* CMDPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		27852F9D249BF5EB00195B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27852FA0249BF5EB00195B1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27852FA2249BF5EB00195B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27852FAA249BF6A600195B1E /* APOD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APOD-Bridging-Header.h"; sourceTree = "<group>"; };
+		27852FAB249BF6A700195B1E /* CMDPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDPhoto.h; sourceTree = "<group>"; };
+		27852FAC249BF6A700195B1E /* CMDPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDPhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,34 @@
 		27852F93249BF5E700195B1E /* APOD */ = {
 			isa = PBXGroup;
 			children = (
-				27852F94249BF5E700195B1E /* AppDelegate.swift */,
-				27852F96249BF5E700195B1E /* SceneDelegate.swift */,
+				27852FA9249BF68B00195B1E /* Model */,
+				27852FA8249BF62800195B1E /* Resources */,
 				27852F98249BF5E700195B1E /* ViewController.swift */,
 				27852F9A249BF5E700195B1E /* Main.storyboard */,
-				27852F9D249BF5EB00195B1E /* Assets.xcassets */,
-				27852F9F249BF5EB00195B1E /* LaunchScreen.storyboard */,
-				27852FA2249BF5EB00195B1E /* Info.plist */,
+				27852FAA249BF6A600195B1E /* APOD-Bridging-Header.h */,
 			);
 			path = APOD;
+			sourceTree = "<group>";
+		};
+		27852FA8249BF62800195B1E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27852F9F249BF5EB00195B1E /* LaunchScreen.storyboard */,
+				27852F94249BF5E700195B1E /* AppDelegate.swift */,
+				27852F96249BF5E700195B1E /* SceneDelegate.swift */,
+				27852F9D249BF5EB00195B1E /* Assets.xcassets */,
+				27852FA2249BF5EB00195B1E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		27852FA9249BF68B00195B1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27852FAB249BF6A700195B1E /* CMDPhoto.h */,
+				27852FAC249BF6A700195B1E /* CMDPhoto.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +122,7 @@
 				TargetAttributes = {
 					27852F90249BF5E700195B1E = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -141,6 +165,7 @@
 				27852F99249BF5E700195B1E /* ViewController.swift in Sources */,
 				27852F95249BF5E700195B1E /* AppDelegate.swift in Sources */,
 				27852F97249BF5E700195B1E /* SceneDelegate.swift in Sources */,
+				27852FAD249BF6A700195B1E /* CMDPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,14 +309,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = APOD/Info.plist;
+				INFOPLIST_FILE = APOD/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chrisdobek.APOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "APOD/APOD-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,14 +329,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = APOD/Info.plist;
+				INFOPLIST_FILE = APOD/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chrisdobek.APOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "APOD/APOD-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
