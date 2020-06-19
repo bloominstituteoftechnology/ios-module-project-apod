@@ -83,6 +83,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5cB-YW-32v"/>
                     <connections>
+                        <outlet property="collectionView" destination="hjG-aD-IFY" id="LUi-py-A8t"/>
                         <segue destination="3sP-Pg-irp" kind="presentation" identifier="OnboardingModalSeuge" id="uZN-Bh-lP2"/>
                     </connections>
                 </viewController>
@@ -117,6 +118,9 @@
                                 <state key="normal" title="Check it out!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="3sP-Pg-irp" eventType="touchUpInside" id="Q3a-mL-8EO"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W69-Wy-y1N">
                                 <rect key="frame" x="40" y="573.5" width="334" height="97"/>
@@ -156,6 +160,9 @@ Picture of the Day</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="47d-Uu-lS5"/>
                     </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="mRA-er-aSN" id="4sd-xc-p5J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cka-4p-g3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,6 +188,7 @@ Picture of the Day</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="info.circle.fill" catalog="system"/>
                                 <connections>
+                                    <action selector="infoButtonTapped:" destination="4JF-5R-p7c" eventType="touchUpInside" id="Qq1-WF-mdR"/>
                                     <segue destination="uQo-wO-fq0" kind="presentation" identifier="ShowImageInfoSegue" id="h1f-CL-PNv"/>
                                 </connections>
                             </button>
@@ -197,6 +205,10 @@ Picture of the Day</string>
                         <viewLayoutGuide key="safeArea" id="ndh-Da-5p0"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mnc-e3-6Y7"/>
+                    <connections>
+                        <outlet property="imageView" destination="rrJ-52-gid" id="iKB-uc-Xwm"/>
+                        <outlet property="infoButton" destination="JtZ-4l-JdF" id="NCM-eJ-Nqe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejc-7J-tQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,6 +250,10 @@ Picture of the Day</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Vg-RT-XIc"/>
                     </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="pqq-XY-euk" id="o21-Xu-9Fx"/>
+                        <outlet property="titleLabel" destination="FsQ-Zg-HXo" id="Rog-ta-bNb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxW-wH-5zT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,10 @@ class PhotoController {
     private let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
     private let apiKey = "fZYtuaURvdLHG3Mc5ieMAv5JOmLhWOohbs8CfLun"
     private var photos: [CMDPhoto] = []
+    var sortedPhotos:[CMDPhoto] {
+        return photos.sorted(by: { $0.date < $1.date })
+    }
+
     
     let df: DateFormatter = {
         let df = DateFormatter()
