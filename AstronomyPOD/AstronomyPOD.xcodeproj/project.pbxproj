@@ -15,6 +15,7 @@
 		B4C8F82624CA1F0600133FED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C8F82424CA1F0600133FED /* LaunchScreen.storyboard */; };
 		B4C8F82924CA1F0600133FED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C8F82824CA1F0600133FED /* main.m */; };
 		B4C8F83024CA1F3500133FED /* Design in Resources */ = {isa = PBXBuildFile; fileRef = B4C8F82F24CA1F3500133FED /* Design */; };
+		B4C8F83324CA233900133FED /* POD.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C8F83224CA233900133FED /* POD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		B4C8F82724CA1F0600133FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C8F82824CA1F0600133FED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4C8F82F24CA1F3500133FED /* Design */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Design; path = ../../Design; sourceTree = "<group>"; };
+		B4C8F83124CA233900133FED /* POD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POD.h; sourceTree = "<group>"; };
+		B4C8F83224CA233900133FED /* POD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 				B4C8F81C24CA1F0300133FED /* ViewController.h */,
 				B4C8F81D24CA1F0300133FED /* ViewController.m */,
 				B4C8F81F24CA1F0300133FED /* Main.storyboard */,
+				B4C8F83424CA234A00133FED /* Model */,
 				B4C8F82224CA1F0600133FED /* Assets.xcassets */,
 				B4C8F82424CA1F0600133FED /* LaunchScreen.storyboard */,
 				B4C8F82724CA1F0600133FED /* Info.plist */,
@@ -77,6 +81,15 @@
 				B4C8F82F24CA1F3500133FED /* Design */,
 			);
 			path = AstronomyPOD;
+			sourceTree = "<group>";
+		};
+		B4C8F83424CA234A00133FED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4C8F83124CA233900133FED /* POD.h */,
+				B4C8F83224CA233900133FED /* POD.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C8F83324CA233900133FED /* POD.m in Sources */,
 				B4C8F81E24CA1F0300133FED /* ViewController.m in Sources */,
 				B4C8F81824CA1F0300133FED /* AppDelegate.m in Sources */,
 				B4C8F82924CA1F0600133FED /* main.m in Sources */,
