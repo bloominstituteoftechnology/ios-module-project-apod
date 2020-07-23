@@ -13,12 +13,14 @@
 + (instancetype)sharedPersonController
 {
     static PersonController *personController = nil;
-    // we are creating a variable and initializing it to nil, so we have to check it
-    if (!personController) {
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         personController = [[self alloc] initSharedInstance];
         // self refers to person controller
-        // b/c its static, it will remember
-    }
+        // b/c its static, it will remember so it needs to be within this code snippet
+        
+    });
     return personController;
 }
 
