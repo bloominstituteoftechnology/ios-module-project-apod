@@ -7,6 +7,7 @@
 //
 
 #import "PersonController.h"
+#import "Person.h"
 
 @implementation PersonController
 
@@ -46,6 +47,9 @@
     
     // we have to ask if it implements a method, now we go to viewcontroller.m
     if ([self.delegate respondsToSelector:@selector(personController:didObserveNewBirth:)]) {
+        
+        Person *person = [[Person alloc] init];
+        
         [self.delegate personController:self didObserveNewBirth:@"New Child"];
     }
 }

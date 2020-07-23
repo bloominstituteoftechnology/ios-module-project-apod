@@ -24,4 +24,24 @@
     }
     return self;
 }
+
+// We are creating a method that will return a nsstring of random names
+- (NSString *)generateRandomName;
+{
+    static NSArray *firstNames = nil;
+    static NSArray *lastNames = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        firstNames = @[@"Roz", @"Nichoel", @"Lemuel", @"Aster"];
+        lastNames = @[@"Salazar", @"@Young", @"Sanders", @"Habte" ];
+    });
+    
+    NSUInteger randomIndex = arc4random_uniform((uint32_t)firstNames.count);
+     NSString *randomFirstName = [firstNames objectAtIndex:randomIndex];
+     NSString *randomLastNames = [lastNames objectAtIndex:arc4random_uniform((uint32_t)lastNames.count)];
+    
+    return [NSString stringWithFormat:@"%@ %@", randomFirstName, randomLastNames ];
+}
+
+
 @end
