@@ -10,6 +10,10 @@
 
 @implementation Person
 
+-(instancetype)init{
+    return [self initWithName:@"Nonye" birthDate:NSDate.now hairColor:PersonHairColorBlond];
+}
+
 - (instancetype)initWithName:(NSString *)aName birthDate:(NSDate *)aBirthDate hairColor:(PersonHairColor)aHairColor
 {
     

@@ -27,8 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSDate *birthDate;
 @property (nonatomic) PersonHairColor hairColor;
 
-- (instancetype)initWithName:(NSString *)aName birthDate:(NSDate *)aBirthDate hairColor:(PersonHairColor)aHairColor;
-
+- (instancetype)initWithName:(NSString *)aName birthDate:(NSDate *)aBirthDate hairColor:(PersonHairColor)aHairColor NS_DESIGNATED_INITIALIZER;
+//by marking it as ns_desig_init, to funnel initialzer to on subclass one intialzer vs initwithname and init and any others created
 @end
 
 NS_ASSUME_NONNULL_END
