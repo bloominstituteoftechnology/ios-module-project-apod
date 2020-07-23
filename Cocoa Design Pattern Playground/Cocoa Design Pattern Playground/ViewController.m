@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "PersonController.h"
 
-@interface ViewController ()
+@interface ViewController () <PersonControllerDelegate>
 
 @end
 
@@ -23,7 +23,23 @@
     
     PersonController *sharedInstanceB = PersonController.sharedPersonController;
      NSLog(@"Person Controller B: %@", sharedInstanceB);
+    
+    PersonController.sharedPersonController.delegate = self;
 }
-
+// MARK: - PersonControllerDelegate
+// we are implementing the selector method from personcontroller.m
+-(void)personController:(PersonController *)personController didObserveNewBirth:(id)person
+{
+    if ([person isKindOfClass:NSString.class]) {
+        NSLog(@"%@ is a string!", person);
+    }
+    
+    if ([person isMemberOfClass:NSString.class]) {
+        NSLog(@"%@ is actually a NSString!!", person);
+    } else {
+        NSLog(@"We were wrong, %@ is actually a %@", person, NSStringFromClass([person class]));
+    }
+    NSLog(@"We detected a new birth! %@", person);
+}
 
 @end
