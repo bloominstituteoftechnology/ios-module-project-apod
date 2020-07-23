@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PersonController : NSObject
 
+// In swift - static let shared = PersonController()
++ (instancetype)sharedPersonController;
+//@property (nonatomic, class, readonly) PersonController *sharedPersonController;
+// These two lines are the same. Readonly means we are only getting the getter.
+
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END
