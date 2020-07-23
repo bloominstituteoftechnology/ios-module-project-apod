@@ -90,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				B4C8F83124CA233900133FED /* POD.h */,
-				B4C8F83624CA370500133FED /* PODController.swift */,
 				B4C8F83224CA233900133FED /* POD.m */,
+				B4C8F83624CA370500133FED /* PODController.swift */,
 				B4C8F83524CA370400133FED /* AstronomyPOD-Bridging-Header.h */,
 			);
 			path = Model;
