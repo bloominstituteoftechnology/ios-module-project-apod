@@ -10,4 +10,14 @@
 
 @implementation Person
 
+- (instancetype)initWithName:(NSString *)aName birthDate:(NSDate *)aBirthDate hairColor:(PersonHairColor)aHairColor
+{
+    
+    if (self = [super init]) {
+        _fullName = aName.copy;
+        _birthDate = aBirthDate;
+        _hairColor = aHairColor;
+    }
+    return self;
+}
 @end

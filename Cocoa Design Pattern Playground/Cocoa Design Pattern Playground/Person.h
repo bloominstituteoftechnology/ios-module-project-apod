@@ -8,9 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
+// adding the enumeration a the top
+// we have to use the name of our enum name (PersonHairColor) within ever enum value
+// each value will be assigned a value automatically starting at 0, or you can set them yourself (like us)
+typedef NS_ENUM(NSUInteger, PersonHairColor) {
+    PersonHairColorBrown = 0,
+    PersonHairColorBlond = 1,
+    PersonHairColorOrange = 2,
+    PersonHairColorBlue = 3,
+    PersonHairColorRed =4,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Person : NSObject
+
+@property (nonatomic, copy) NSString *fullName;
+@property (nonatomic) NSDate *birthDate;
+@property (nonatomic) PersonHairColor hairColor;
+
+- (instancetype)initWithName:(NSString *)aName birthDate:(NSDate *)aBirthDate hairColor:(PersonHairColor)aHairColor;
 
 @end
 
