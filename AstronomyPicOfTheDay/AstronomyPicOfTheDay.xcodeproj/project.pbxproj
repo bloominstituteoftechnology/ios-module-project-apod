@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63A4ADF924E6283A004FA180 /* AstronomyPicOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstronomyPicOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63A4ADF924E6283A004FA180 /* Pic of the Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic of the Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A4ADFC24E6283B004FA180 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63A4ADFD24E6283B004FA180 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		63A4ADFF24E6283B004FA180 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		63A4ADFA24E6283A004FA180 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63A4ADF924E6283A004FA180 /* AstronomyPicOfTheDay.app */,
+				63A4ADF924E6283A004FA180 /* Pic of the Day.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,7 +96,7 @@
 			);
 			name = AstronomyPicOfTheDay;
 			productName = AstronomyPicOfTheDay;
-			productReference = 63A4ADF924E6283A004FA180 /* AstronomyPicOfTheDay.app */;
+			productReference = 63A4ADF924E6283A004FA180 /* Pic of the Day.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -299,7 +299,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chadparker.AstronomyPicOfTheDay;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pic of the Day";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -316,7 +316,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chadparker.AstronomyPicOfTheDay;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pic of the Day";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
