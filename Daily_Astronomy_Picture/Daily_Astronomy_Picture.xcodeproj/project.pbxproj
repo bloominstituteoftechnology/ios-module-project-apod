@@ -15,6 +15,7 @@
 		3AE2BC0224E6249700E7068F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE2BC0024E6249700E7068F /* LaunchScreen.storyboard */; };
 		3AE2BC0524E6249700E7068F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2BC0424E6249700E7068F /* main.m */; };
 		3AE2BC0D24E63AAF00E7068F /* AstronomyClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2BC0C24E63AAF00E7068F /* AstronomyClient.m */; };
+		3AE2BC1024E63AF400E7068F /* Astronomy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2BC0F24E63AF400E7068F /* Astronomy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		3AE2BC0424E6249700E7068F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3AE2BC0B24E63AAF00E7068F /* AstronomyClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AstronomyClient.h; sourceTree = "<group>"; };
 		3AE2BC0C24E63AAF00E7068F /* AstronomyClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AstronomyClient.m; sourceTree = "<group>"; };
+		3AE2BC0E24E63AF400E7068F /* Astronomy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Astronomy.h; sourceTree = "<group>"; };
+		3AE2BC0F24E63AF400E7068F /* Astronomy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Astronomy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				3AE2BBFB24E6249400E7068F /* Main.storyboard */,
 				3AE2BC0B24E63AAF00E7068F /* AstronomyClient.h */,
 				3AE2BC0C24E63AAF00E7068F /* AstronomyClient.m */,
+				3AE2BC0E24E63AF400E7068F /* Astronomy.h */,
+				3AE2BC0F24E63AF400E7068F /* Astronomy.m */,
 				3AE2BBFE24E6249700E7068F /* Assets.xcassets */,
 				3AE2BC0024E6249700E7068F /* LaunchScreen.storyboard */,
 				3AE2BC0324E6249700E7068F /* Info.plist */,
@@ -153,6 +158,7 @@
 			files = (
 				3AE2BBFA24E6249400E7068F /* ViewController.m in Sources */,
 				3AE2BC0D24E63AAF00E7068F /* AstronomyClient.m in Sources */,
+				3AE2BC1024E63AF400E7068F /* Astronomy.m in Sources */,
 				3AE2BBF424E6249400E7068F /* AppDelegate.m in Sources */,
 				3AE2BC0524E6249700E7068F /* main.m in Sources */,
 				3AE2BBF724E6249400E7068F /* SceneDelegate.m in Sources */,
