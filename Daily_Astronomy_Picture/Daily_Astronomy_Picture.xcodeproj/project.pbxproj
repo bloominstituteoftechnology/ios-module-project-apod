@@ -17,6 +17,7 @@
 		3AE2BC0D24E63AAF00E7068F /* AstronomyClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2BC0C24E63AAF00E7068F /* AstronomyClient.m */; };
 		3AE2BC1024E63AF400E7068F /* Astronomy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2BC0F24E63AF400E7068F /* Astronomy.m */; };
 		3AE2BC1324E63B5000E7068F /* AstronomyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2BC1224E63B5000E7068F /* AstronomyCollectionViewController.swift */; };
+		3AE2BC1524E63B9800E7068F /* AstronomyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2BC1424E63B9800E7068F /* AstronomyDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3AE2BC0F24E63AF400E7068F /* Astronomy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Astronomy.m; sourceTree = "<group>"; };
 		3AE2BC1124E63B4F00E7068F /* Daily_Astronomy_Picture-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Daily_Astronomy_Picture-Bridging-Header.h"; sourceTree = "<group>"; };
 		3AE2BC1224E63B5000E7068F /* AstronomyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyCollectionViewController.swift; sourceTree = "<group>"; };
+		3AE2BC1424E63B9800E7068F /* AstronomyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				3AE2BC0E24E63AF400E7068F /* Astronomy.h */,
 				3AE2BC0F24E63AF400E7068F /* Astronomy.m */,
 				3AE2BC1224E63B5000E7068F /* AstronomyCollectionViewController.swift */,
+				3AE2BC1424E63B9800E7068F /* AstronomyDetailViewController.swift */,
 				3AE2BBFE24E6249700E7068F /* Assets.xcassets */,
 				3AE2BC0024E6249700E7068F /* LaunchScreen.storyboard */,
 				3AE2BC0324E6249700E7068F /* Info.plist */,
@@ -166,6 +169,7 @@
 				3AE2BC0D24E63AAF00E7068F /* AstronomyClient.m in Sources */,
 				3AE2BC1024E63AF400E7068F /* Astronomy.m in Sources */,
 				3AE2BBF424E6249400E7068F /* AppDelegate.m in Sources */,
+				3AE2BC1524E63B9800E7068F /* AstronomyDetailViewController.swift in Sources */,
 				3AE2BC0524E6249700E7068F /* main.m in Sources */,
 				3AE2BBF724E6249400E7068F /* SceneDelegate.m in Sources */,
 				3AE2BC1324E63B5000E7068F /* AstronomyCollectionViewController.swift in Sources */,
