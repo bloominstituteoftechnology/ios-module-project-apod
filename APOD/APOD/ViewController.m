@@ -13,6 +13,9 @@
 
 @property PODFetcher *podFetcher;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @end
 
 @implementation ViewController
@@ -22,7 +25,19 @@
     
     self.podFetcher = [[PODFetcher alloc] init];
     [self.podFetcher fetchPhotoOfTheDay:^(Photo * _Nullable photo, NSError * _Nullable error) {
-        NSLog(@"Finished Fetching photo: %@, %@", photo.title, photo.url);
+        
+        dispatch_async(dispatch_get_global_queue(0,0), ^{
+            NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: photo.url]];
+            if ( data == nil )
+                return;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.imageView.image = [UIImage imageWithData: data];
+            });
+        });
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.titleLabel.text = photo.title;
+        });
     }];
     
 }
