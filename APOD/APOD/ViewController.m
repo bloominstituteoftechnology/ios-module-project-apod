@@ -13,6 +13,7 @@
 
 @property PODFetcher *podFetcher;
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
@@ -39,8 +40,10 @@
             self.titleLabel.text = photo.title;
         });
     }];
-    
 }
 
+- (IBAction)selectedDate:(UIDatePicker *)sender {
+    NSLog(@"Date selected: %@", sender.date);
+}
 
 @end
