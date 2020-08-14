@@ -58,10 +58,7 @@
 		63A4ADFB24E6283A004FA180 /* AstronomyPicOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
-				63A4ADFC24E6283B004FA180 /* AppDelegate.h */,
-				63A4ADFD24E6283B004FA180 /* AppDelegate.m */,
-				63A4ADFF24E6283B004FA180 /* SceneDelegate.h */,
-				63A4AE0024E6283B004FA180 /* SceneDelegate.m */,
+				63A4AE1524E62F29004FA180 /* AppDelegate */,
 				63A4AE0524E6283B004FA180 /* Main.storyboard */,
 				63A4AE0824E6283B004FA180 /* Assets.xcassets */,
 				63A4AE0A24E6283B004FA180 /* LaunchScreen.storyboard */,
@@ -69,6 +66,17 @@
 				63A4AE0E24E6283B004FA180 /* main.m */,
 			);
 			path = AstronomyPicOfTheDay;
+			sourceTree = "<group>";
+		};
+		63A4AE1524E62F29004FA180 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				63A4ADFC24E6283B004FA180 /* AppDelegate.h */,
+				63A4ADFD24E6283B004FA180 /* AppDelegate.m */,
+				63A4ADFF24E6283B004FA180 /* SceneDelegate.h */,
+				63A4AE0024E6283B004FA180 /* SceneDelegate.m */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
