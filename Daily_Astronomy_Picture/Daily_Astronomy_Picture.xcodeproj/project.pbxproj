@@ -14,6 +14,7 @@
 		3AE2BBFF24E6249700E7068F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AE2BBFE24E6249700E7068F /* Assets.xcassets */; };
 		3AE2BC0224E6249700E7068F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE2BC0024E6249700E7068F /* LaunchScreen.storyboard */; };
 		3AE2BC0524E6249700E7068F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2BC0424E6249700E7068F /* main.m */; };
+		3AE2BC0D24E63AAF00E7068F /* AstronomyClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2BC0C24E63AAF00E7068F /* AstronomyClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		3AE2BC0124E6249700E7068F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AE2BC0324E6249700E7068F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AE2BC0424E6249700E7068F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AE2BC0B24E63AAF00E7068F /* AstronomyClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AstronomyClient.h; sourceTree = "<group>"; };
+		3AE2BC0C24E63AAF00E7068F /* AstronomyClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AstronomyClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				3AE2BBF824E6249400E7068F /* ViewController.h */,
 				3AE2BBF924E6249400E7068F /* ViewController.m */,
 				3AE2BBFB24E6249400E7068F /* Main.storyboard */,
+				3AE2BC0B24E63AAF00E7068F /* AstronomyClient.h */,
+				3AE2BC0C24E63AAF00E7068F /* AstronomyClient.m */,
 				3AE2BBFE24E6249700E7068F /* Assets.xcassets */,
 				3AE2BC0024E6249700E7068F /* LaunchScreen.storyboard */,
 				3AE2BC0324E6249700E7068F /* Info.plist */,
@@ -147,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AE2BBFA24E6249400E7068F /* ViewController.m in Sources */,
+				3AE2BC0D24E63AAF00E7068F /* AstronomyClient.m in Sources */,
 				3AE2BBF424E6249400E7068F /* AppDelegate.m in Sources */,
 				3AE2BC0524E6249700E7068F /* main.m in Sources */,
 				3AE2BBF724E6249400E7068F /* SceneDelegate.m in Sources */,
