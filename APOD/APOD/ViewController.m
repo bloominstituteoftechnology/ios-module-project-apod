@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "PODFetcher.h"
 
 @interface ViewController ()
+
+@property PODFetcher *podFetcher;
 
 @end
 
@@ -16,7 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.podFetcher = [[PODFetcher alloc] init];
+    [self.podFetcher fetchPhotoOfTheDay:^(Photo * _Nullable photo, NSError * _Nullable error) {
+        NSLog(@"Finished Fetching photo: %@, %@", photo.title, photo.url);
+    }];
+    
 }
 
 
