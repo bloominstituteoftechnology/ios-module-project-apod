@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PODFetcher : NSObject
 
-- (void)fetchPhotoOfTheDay:(FetchPhotoCompletionHandler)completionHandler;
+- (void)fetchPhotoOfTheDay:(NSDate *)date
+         completionHandler:(FetchPhotoCompletionHandler)completionHandler;
 
 @end
 

@@ -13,13 +13,20 @@ static NSString *const APIKey = @"CrGyhe4SzkbgKB2Ahw17krmCKU9JbRToEUxkc1Yh";
 
 @implementation PODFetcher
 
-- (void)fetchPhotoOfTheDay:(FetchPhotoCompletionHandler)completionHandler
+- (void)fetchPhotoOfTheDay:(NSDate *)date completionHandler:(FetchPhotoCompletionHandler)completionHandler
 {
     if (!completionHandler) return;
     
     NSURL *baseURL = [NSURL URLWithString:@"https://api.nasa.gov/planetary/apod"];
     NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
-    NSURLQueryItem *dateItem = [NSURLQueryItem queryItemWithName:@"date" value:@"2020-05-31"];
+    
+    NSLog(@"Date: %@", date);
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY-MM-DD"];
+    NSString *dateString = [dateFormatter stringFromDate:date];
+    
+    NSURLQueryItem *dateItem = [NSURLQueryItem queryItemWithName:@"date" value:dateString];
     NSURLQueryItem *apiKeyItem = [NSURLQueryItem queryItemWithName:@"api_key" value:APIKey];
     urlComponents.queryItems = @[dateItem, apiKeyItem];
     
