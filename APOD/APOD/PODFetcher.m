@@ -23,7 +23,7 @@ static NSString *const APIKey = @"CrGyhe4SzkbgKB2Ahw17krmCKU9JbRToEUxkc1Yh";
     NSLog(@"Date: %@", date);
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"YYYY-MM-DD"];
+    [dateFormatter setDateFormat:@"YYYY-MM-dd"];
     NSString *dateString = [dateFormatter stringFromDate:date];
     
     NSURLQueryItem *dateItem = [NSURLQueryItem queryItemWithName:@"date" value:dateString];
