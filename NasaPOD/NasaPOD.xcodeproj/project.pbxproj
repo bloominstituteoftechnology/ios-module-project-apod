@@ -14,6 +14,7 @@
 		1AE1E6C125832CFD00303492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE1E6BF25832CFD00303492 /* LaunchScreen.storyboard */; };
 		1AE1E6C425832CFD00303492 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6C325832CFD00303492 /* main.m */; };
 		1AE1E6CE25832EBA00303492 /* PhotoOfTheDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6CD25832EBA00303492 /* PhotoOfTheDay.m */; };
+		1AE1E6D22583DEED00303492 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6D12583DEED00303492 /* APIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		1AE1E6C325832CFD00303492 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AE1E6CC25832EBA00303492 /* PhotoOfTheDay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoOfTheDay.h; sourceTree = "<group>"; };
 		1AE1E6CD25832EBA00303492 /* PhotoOfTheDay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoOfTheDay.m; sourceTree = "<group>"; };
+		1AE1E6D02583DEED00303492 /* NasaPOD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NasaPOD-Bridging-Header.h"; sourceTree = "<group>"; };
+		1AE1E6D12583DEED00303492 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +70,13 @@
 				1AE1E6B525832CFB00303492 /* SceneDelegate.m */,
 				1AE1E6CC25832EBA00303492 /* PhotoOfTheDay.h */,
 				1AE1E6CD25832EBA00303492 /* PhotoOfTheDay.m */,
+				1AE1E6D12583DEED00303492 /* APIController.swift */,
 				1AE1E6BA25832CFB00303492 /* Main.storyboard */,
 				1AE1E6BD25832CFD00303492 /* Assets.xcassets */,
 				1AE1E6BF25832CFD00303492 /* LaunchScreen.storyboard */,
 				1AE1E6C225832CFD00303492 /* Info.plist */,
 				1AE1E6C325832CFD00303492 /* main.m */,
+				1AE1E6D02583DEED00303492 /* NasaPOD-Bridging-Header.h */,
 			);
 			path = NasaPOD;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 				TargetAttributes = {
 					1AE1E6AD25832CFB00303492 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -149,6 +155,7 @@
 				1AE1E6B325832CFB00303492 /* AppDelegate.m in Sources */,
 				1AE1E6C425832CFD00303492 /* main.m in Sources */,
 				1AE1E6B625832CFB00303492 /* SceneDelegate.m in Sources */,
+				1AE1E6D22583DEED00303492 /* APIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 739A4FRA34;
 				INFOPLIST_FILE = NasaPOD/Info.plist;
@@ -300,6 +308,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoraJacobson.NasaPOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NasaPOD/NasaPOD-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 739A4FRA34;
 				INFOPLIST_FILE = NasaPOD/Info.plist;
@@ -318,6 +330,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoraJacobson.NasaPOD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NasaPOD/NasaPOD-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
