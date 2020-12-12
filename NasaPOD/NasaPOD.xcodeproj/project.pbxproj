@@ -15,6 +15,10 @@
 		1AE1E6C425832CFD00303492 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6C325832CFD00303492 /* main.m */; };
 		1AE1E6CE25832EBA00303492 /* PhotoOfTheDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6CD25832EBA00303492 /* PhotoOfTheDay.m */; };
 		1AE1E6D22583DEED00303492 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6D12583DEED00303492 /* APIController.swift */; };
+		1AE1E6D7258431DB00303492 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6D6258431DB00303492 /* PhotoCell.m */; };
+		1AE1E6E2258433A900303492 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6E1258433A900303492 /* CollectionVC.swift */; };
+		1AE1E6E6258433C800303492 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6E5258433C800303492 /* DetailVC.swift */; };
+		1AE1E6E9258433D700303492 /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E6E8258433D700303492 /* TextVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,11 @@
 		1AE1E6CD25832EBA00303492 /* PhotoOfTheDay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoOfTheDay.m; sourceTree = "<group>"; };
 		1AE1E6D02583DEED00303492 /* NasaPOD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NasaPOD-Bridging-Header.h"; sourceTree = "<group>"; };
 		1AE1E6D12583DEED00303492 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		1AE1E6D5258431DB00303492 /* PhotoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		1AE1E6D6258431DB00303492 /* PhotoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		1AE1E6E1258433A900303492 /* CollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
+		1AE1E6E5258433C800303492 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		1AE1E6E8258433D700303492 /* TextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +77,10 @@
 				1AE1E6B225832CFB00303492 /* AppDelegate.m */,
 				1AE1E6B425832CFB00303492 /* SceneDelegate.h */,
 				1AE1E6B525832CFB00303492 /* SceneDelegate.m */,
-				1AE1E6CC25832EBA00303492 /* PhotoOfTheDay.h */,
-				1AE1E6CD25832EBA00303492 /* PhotoOfTheDay.m */,
-				1AE1E6D12583DEED00303492 /* APIController.swift */,
+				1AE1E6DC2584334600303492 /* Model */,
+				1AE1E6DD2584335A00303492 /* ModelController */,
+				1AE1E6DE2584336D00303492 /* Views */,
+				1AE1E6DF2584338500303492 /* ViewControllers */,
 				1AE1E6BA25832CFB00303492 /* Main.storyboard */,
 				1AE1E6BD25832CFD00303492 /* Assets.xcassets */,
 				1AE1E6BF25832CFD00303492 /* LaunchScreen.storyboard */,
@@ -79,6 +89,42 @@
 				1AE1E6D02583DEED00303492 /* NasaPOD-Bridging-Header.h */,
 			);
 			path = NasaPOD;
+			sourceTree = "<group>";
+		};
+		1AE1E6DC2584334600303492 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AE1E6CC25832EBA00303492 /* PhotoOfTheDay.h */,
+				1AE1E6CD25832EBA00303492 /* PhotoOfTheDay.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AE1E6DD2584335A00303492 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				1AE1E6D12583DEED00303492 /* APIController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		1AE1E6DE2584336D00303492 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AE1E6D5258431DB00303492 /* PhotoCell.h */,
+				1AE1E6D6258431DB00303492 /* PhotoCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1AE1E6DF2584338500303492 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AE1E6E1258433A900303492 /* CollectionVC.swift */,
+				1AE1E6E5258433C800303492 /* DetailVC.swift */,
+				1AE1E6E8258433D700303492 /* TextVC.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,11 +197,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE1E6D7258431DB00303492 /* PhotoCell.m in Sources */,
 				1AE1E6CE25832EBA00303492 /* PhotoOfTheDay.m in Sources */,
 				1AE1E6B325832CFB00303492 /* AppDelegate.m in Sources */,
 				1AE1E6C425832CFD00303492 /* main.m in Sources */,
+				1AE1E6E2258433A900303492 /* CollectionVC.swift in Sources */,
+				1AE1E6E6258433C800303492 /* DetailVC.swift in Sources */,
 				1AE1E6B625832CFB00303492 /* SceneDelegate.m in Sources */,
 				1AE1E6D22583DEED00303492 /* APIController.swift in Sources */,
+				1AE1E6E9258433D700303492 /* TextVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,7 @@ class APIController: NSObject {
     
     private let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
     private let apiKey = "qzGsj0zsKk6CA9JZP1UjAbpQHabBfaPg2M5dGMB7"
+    
     @objc(sharedController)
     static let shared = APIController()
     
@@ -33,7 +34,10 @@ class APIController: NSObject {
         components.queryItems = [queryDate, key]
         let url = components.url!
         
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
             if let error = error {
                 DispatchQueue.main.async {
                     completion(nil, error)
@@ -66,6 +70,34 @@ class APIController: NSObject {
             }
             
         }.resume()
+    }
+    
+    func fetchImage(url: URL, completion: @escaping (_ image: UIImage?, _ error: Error?) -> Void) {
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            
+            if let error = error {
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
+                return
+            }
+            
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    completion(nil, APIError.DataNilError)
+                }
+                return
+            }
+            
+            if let image = UIImage(data: data) {
+                completion(image, nil)
+            } else if let alternateImage = UIImage(named: "planet") {
+                completion(alternateImage, nil)
+            }
+        }
+        task.resume()
     }
     
 }
