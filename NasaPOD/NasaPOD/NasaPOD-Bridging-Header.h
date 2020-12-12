@@ -3,4 +3,3 @@
 //
 
 #import "PhotoOfTheDay.h"
-#import "PhotoCell.h"

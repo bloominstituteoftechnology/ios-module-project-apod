@@ -26,8 +26,8 @@ class DetailVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showTextSegue" {
             let textVC = segue.destination as! TextVC
-            textVC.titleLabel.text = photo.title
-            textVC.explanationTextView.text = photo.explanation
+            textVC.titleString = photo.title
+            textVC.explanation = photo.explanation
         }
     }
     
